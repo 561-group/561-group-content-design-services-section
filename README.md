@@ -15,3 +15,7 @@ Start with [the design-bible specification](content/text/documents/articles/spec
 The readable v0.3 edition is [the rendered design bible](content/text/documents/articles/specifications/561-group-design-bible-v0.3.html). Its active stylesheet is [the v0.3 CSS](code/styles/561-group-design-bible-v0.3.css). The design prompt is a specification too, at [561-group-visual-design-prompt.md](content/text/documents/articles/specifications/561-group-visual-design-prompt.md), rather than a disconnected science note.
 
 The old FARS register layout, prior HTML editions, and their renderer are retained only as [package-local legacy material](lib/legacy/design-bible/). They are evidence of prior editions, not active documentation routes.
+
+## Internal service contract
+
+An owned design corpus is not by itself a delivered internal service. A design-service receipt should identify the customer, artifact or surface, requested transformation or assessment, applicable design edition, accountable provider, and customer acceptance evidence.
