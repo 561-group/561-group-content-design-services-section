@@ -1,0 +1,325 @@
+{
+  "$description": "561 Group Visual Design Bible core tokens. Candidate normative source for cross-medium projection.",
+  "$extensions": {
+    "com.561.spec": {
+      "title": "561 Group Visual Design Bible",
+      "version": "0.4.0-candidate",
+      "status": "candidate",
+      "authority": "561 Group",
+      "projection_model": "semantics -> form model -> TUFTE topology/tiling -> medium profile",
+      "recovered_on": "2026-10-06"
+    }
+  },
+  "color": {
+    "$type": "color",
+    "ink": {
+      "$description": "Primary mark/text color. Near-black rather than absolute black for physical warmth.",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.039216,
+          0.039216,
+          0.039216
+        ],
+        "alpha": 1
+      },
+      "$extensions": {
+        "com.561.hex": "0A0A0A"
+      }
+    },
+    "bone": {
+      "$description": "Primary ground. Warm institutional paper/surface.",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.94902,
+          0.917647,
+          0.847059
+        ],
+        "alpha": 1
+      },
+      "$extensions": {
+        "com.561.hex": "F2EAD8"
+      }
+    },
+    "witness": {
+      "$description": "Witness/reference blue. Used for links, verification, evidence, selected state; scarce salience.",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.239216,
+          0.333333,
+          0.533333
+        ],
+        "alpha": 1
+      },
+      "$extensions": {
+        "com.561.hex": "3D5588"
+      }
+    },
+    "alarm": {
+      "$description": "Warm alarm/action red. Not a default text color on bone; use for exception, action, or consequence.",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.270588,
+          0.188235
+        ],
+        "alpha": 1
+      },
+      "$extensions": {
+        "com.561.hex": "FF4530"
+      }
+    },
+    "ink-soft": {
+      "$description": "Secondary ink for metadata and apparatus.",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.286275,
+          0.278431,
+          0.258824
+        ],
+        "alpha": 1
+      },
+      "$extensions": {
+        "com.561.hex": "494742"
+      }
+    },
+    "rule": {
+      "$description": "Warm rule/divider color for low-salience structure.",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.803922,
+          0.776471,
+          0.717647
+        ],
+        "alpha": 1
+      },
+      "$extensions": {
+        "com.561.hex": "CDC6B7"
+      }
+    },
+    "dark-ground": {
+      "$description": "Dark-mode ground; brown-black rather than neutral black.",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0.070588,
+          0.047059,
+          0.007843
+        ],
+        "alpha": 1
+      },
+      "$extensions": {
+        "com.561.hex": "120C02"
+      }
+    },
+    "paper-white": {
+      "$description": "High-key plate/figure ground when bone would reduce contrast.",
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          1,
+          0.992157,
+          0.968627
+        ],
+        "alpha": 1
+      },
+      "$extensions": {
+        "com.561.hex": "FFFDF7"
+      }
+    }
+  },
+  "type": {
+    "family": {
+      "$type": "fontFamily",
+      "display": {
+        "$value": [
+          "Space Grotesk",
+          "DejaVu Sans",
+          "Helvetica Neue",
+          "Arial",
+          "sans-serif"
+        ]
+      },
+      "reading": {
+        "$value": [
+          "Roboto Slab",
+          "DejaVu Serif",
+          "Georgia",
+          "serif"
+        ]
+      },
+      "evidence": {
+        "$value": [
+          "JetBrains Mono",
+          "DejaVu Sans Mono",
+          "Courier New",
+          "monospace"
+        ]
+      }
+    },
+    "measure": {
+      "$type": "dimension",
+      "reading": {
+        "$value": {
+          "value": 42,
+          "unit": "rem"
+        },
+        "$description": "Web reading measure recovered from current 561 theme."
+      },
+      "print-body": {
+        "$value": {
+          "value": 112,
+          "unit": "mm"
+        },
+        "$description": "Target long-form print text measure."
+      },
+      "margin-apparatus": {
+        "$value": {
+          "value": 34,
+          "unit": "mm"
+        },
+        "$description": "Target outer apparatus/margin-note field on A4."
+      }
+    },
+    "scale": {
+      "$type": "number",
+      "ratio": {
+        "$value": 1.25
+      },
+      "body-print-pt": {
+        "$value": 10.25
+      },
+      "body-web-rem": {
+        "$value": 1.0625
+      }
+    }
+  },
+  "space": {
+    "$description": "Abstract spacing ladder. Medium renderers map steps to appropriate physical units; step 7 maps to the recovered 56px web gutter.",
+    "$type": "number",
+    "0": {
+      "$value": 0
+    },
+    "1": {
+      "$value": 0.5
+    },
+    "2": {
+      "$value": 1
+    },
+    "3": {
+      "$value": 1.5
+    },
+    "4": {
+      "$value": 2
+    },
+    "5": {
+      "$value": 3
+    },
+    "6": {
+      "$value": 4
+    },
+    "7": {
+      "$value": 7
+    },
+    "8": {
+      "$value": 10
+    }
+  },
+  "line": {
+    "$type": "number",
+    "hairline": {
+      "$value": 0.3
+    },
+    "rule": {
+      "$value": 0.8
+    },
+    "strong": {
+      "$value": 2
+    },
+    "institutional": {
+      "$value": 8
+    }
+  },
+  "shape": {
+    "radius": {
+      "$type": "dimension",
+      "$value": {
+        "value": 0,
+        "unit": "px"
+      },
+      "$description": "Core 561 geometry is square-cornered; habitat exceptions require semantic justification."
+    }
+  },
+  "layout": {
+    "web": {
+      "max-width": {
+        "$type": "dimension",
+        "$value": {
+          "value": 1200,
+          "unit": "px"
+        }
+      },
+      "gutter": {
+        "$type": "dimension",
+        "$value": {
+          "value": 56,
+          "unit": "px"
+        }
+      },
+      "mobile-gutter": {
+        "$type": "dimension",
+        "$value": {
+          "value": 24,
+          "unit": "px"
+        }
+      }
+    },
+    "print": {
+      "trim": {
+        "$type": "string",
+        "$value": "A4"
+      },
+      "inner-margin-mm": {
+        "$type": "number",
+        "$value": 22
+      },
+      "outer-margin-mm": {
+        "$type": "number",
+        "$value": 38
+      },
+      "top-margin-mm": {
+        "$type": "number",
+        "$value": 20
+      },
+      "bottom-margin-mm": {
+        "$type": "number",
+        "$value": 24
+      }
+    }
+  },
+  "motion": {
+    "standard-ms": {
+      "$type": "duration",
+      "$value": {
+        "value": 300,
+        "unit": "ms"
+      }
+    },
+    "entrance-ms": {
+      "$type": "duration",
+      "$value": {
+        "value": 500,
+        "unit": "ms"
+      }
+    },
+    "rule": {
+      "$type": "string",
+      "$value": "Motion may orient, reveal causality, or acknowledge state; it must not be ambient decoration and must honor reduced-motion preferences."
+    }
+  }
+}
