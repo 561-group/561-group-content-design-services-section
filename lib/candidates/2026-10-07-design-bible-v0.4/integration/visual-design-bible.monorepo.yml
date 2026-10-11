@@ -1,0 +1,94 @@
+name: Build 561 visual design Bible
+
+on:
+  push:
+    paths:
+      - 'design/visual-design-bible/**'
+      - '.github/workflows/visual-design-bible.yml'
+  pull_request:
+    paths:
+      - 'design/visual-design-bible/**'
+      - '.github/workflows/visual-design-bible.yml'
+  workflow_dispatch:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: design/visual-design-bible
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      - name: Install R dependency
+        shell: Rscript {0}
+        run: install.packages('jsonlite')
+
+      - name: Install PDF toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            latexmk texlive-xetex texlive-latex-extra texlive-fonts-recommended \
+            fonts-dejavu-core poppler-utils qpdf
+
+      - name: Pin reproducible build time
+        run: |
+          echo "SOURCE_DATE_EPOCH=$(git -C ../.. log -1 --format=%ct)" >> "$GITHUB_ENV"
+          echo "TZ=UTC" >> "$GITHUB_ENV"
+
+      - name: Derive and validate design tokens
+        run: |
+          Rscript R/derive_tokens.R .
+          git -C ../.. diff --exit-code -- design/visual-design-bible/generated/
+
+      - name: Build PDF
+        run: latexmk -xelatex -interaction=nonstopmode -halt-on-error design-bible.tex
+
+      - name: Preflight PDF
+        run: |
+          qpdf --check design-bible.pdf
+          pdfinfo design-bible.pdf
+          pdffonts design-bible.pdf | tee pdffonts.txt
+          test "$(pdfinfo design-bible.pdf | awk '/^Pages:/ {print $2}')" -gt 0
+          if pdffonts design-bible.pdf | tail -n +3 | awk '{print $6}' | grep -q '^no$'; then
+            echo 'At least one font is not embedded.' >&2
+            exit 1
+          fi
+          if grep -q 'Overfull \\[hv]box' design-bible.log; then
+            grep 'Overfull' design-bible.log >&2
+            exit 1
+          fi
+          pdftoppm -f 1 -singlefile -png -r 144 design-bible.pdf preview >/dev/null
+          sha256sum design-bible.pdf > design-bible.pdf.sha256
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: 561-visual-design-bible-${{ github.sha }}
+          path: |
+            design/visual-design-bible/design-bible.pdf
+            design/visual-design-bible/design-bible.pdf.sha256
+            design/visual-design-bible/tokens/561.tokens.json
+            design/visual-design-bible/generated/contrast-table.tex
+            design/visual-design-bible/pdffonts.txt
+            design/visual-design-bible/preview.png
+          if-no-files-found: error
+
+      - name: Attach PDF to GitHub release
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload "${{ github.event.release.tag_name }}" design-bible.pdf design-bible.pdf.sha256 --clobber
