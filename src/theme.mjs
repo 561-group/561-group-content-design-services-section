@@ -1,5 +1,5 @@
 import { decodeTheme, escapeHtml, } from "@red-cup-engineering/web-theming-service/theming";
-import designTokens from "../data/records/design-tokens/561-group.tokens.json" with { type: "json" };
+import designTokens from "../data/records/design-token-records/561-group.tokens.json" with { type: "json" };
 // The 561 Group visual identity as a thin spec on the shared web-theming system:
 // a handful of colour seeds + type tokens, from which web-theming derives the full
 // light AND dark palettes (OKLCH; WCAG-certified), plus the chrome unique to this

@@ -5,7 +5,7 @@ standard: Design Tokens Community Group Format Module 2025.10
 
 # 561 Group Design Token Profile
 
-[`561-group.tokens.json`](../../../../../data/records/design-tokens/561-group.tokens.json)
+[`561-group.tokens.json`](../../../../../data/records/design-token-records/561-group.tokens.json)
 is the canonical portable representation of the palette, font stacks, weights,
 spacing, web dimensions, and core type styles. It uses the [Design Tokens
 Community Group Format Module 2025.10](https://www.w3.org/community/reports/design-tokens/CG-FINAL-format-20251028/)
