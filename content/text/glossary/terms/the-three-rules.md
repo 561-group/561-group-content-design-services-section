@@ -10,6 +10,14 @@ see-also: [voice-as-specificity, refusal-as-design-method, bible-as-living-docum
 
 Three rules carry most of the weight of the bible.
 
+The formulations below carry the authored compact-copy voice. For developed
+corporate prose, apply the
+[explanatory-prose procedure](../../documents/articles/specifications/procedures/voice-substitution.md#developed-public-prose)
+rather than treating the word list as a universal vocabulary ban. A precise
+use of *community* or an account of the Group's stated purpose does not by
+itself adopt the donor-appeal register. Keep the argument, evidence, and
+political meaning intact.
+
 1. **Be specific.** Three acres beats "our region."
   A name beats "kin."
   A date beats "soon."
