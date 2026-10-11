@@ -1,0 +1,1166 @@
+\documentclass[11pt,twoside,openany]{report}
+\usepackage{561design}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{makecell}
+\usepackage{lastpage}
+
+\definecolor{Koios008}{HTML}{000088}
+\definecolor{Graphite}{HTML}{30302E}
+\definecolor{Concrete}{HTML}{B8B5AB}
+\definecolor{LabGlass}{HTML}{DDE8E8}
+\definecolor{CivicPaper}{HTML}{FAF8F1}
+
+\newcommand{\MUST}{\textbf{MUST}\xspace}
+\newcommand{\MUSTNOT}{\textbf{MUST NOT}\xspace}
+\newcommand{\SHOULD}{\textbf{SHOULD}\xspace}
+\newcommand{\SHOULDNOT}{\textbf{SHOULD NOT}\xspace}
+\newcommand{\MAY}{\textbf{MAY}\xspace}
+\newcommand{\Source}[1]{\par{\FSOEvidence\fontsize{7}{9}\selectfont\color{FSOInkSoft}SOURCE: \url{#1}}}
+\newcommand{\StatusLine}[2]{\FSOLabel{#1}\hfill\FSOStatus{#2}\par}
+
+\begin{document}
+
+% ---------------------------------------------------------------------------
+% COVER
+% ---------------------------------------------------------------------------
+\begin{titlepage}
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+  \fill[FSOBone] (current page.south west) rectangle (current page.north east);
+  \fill[FSOInk] ([xshift=15mm,yshift=-15mm]current page.north west) rectangle ([xshift=-15mm,yshift=-23mm]current page.north east);
+  \fill[FSOWitness] ([xshift=5mm,yshift=20mm]current page.south west) rectangle ([xshift=10mm,yshift=70mm]current page.south west);
+  \fill[FSOAlarm] ([xshift=12mm,yshift=20mm]current page.south west) rectangle ([xshift=15mm,yshift=70mm]current page.south west);
+  \draw[FSOInk,line width=2.2pt] ([xshift=15mm,yshift=-34mm]current page.north west) -- ([xshift=-15mm,yshift=-34mm]current page.north east);
+\end{tikzpicture}
+
+\vspace*{6mm}
+{\FSOEvidence\fontsize{8}{10}\selectfont\color{FSOBone}\MakeUppercase{The 561 Group \quad / \quad Candidate normative visual system}}\par
+\vspace*{38mm}
+{\FSOCoverMark}\par
+\vspace{8mm}
+{\FSOCoverTitle}\par
+\vspace{7mm}
+{\FSOReading\fontsize{13}{18}\selectfont\color{FSOInkSoft}
+A medium-independent specification for typography, color, information structure, institutional habitats, LaTeX/PDF publication, TUFTE projection, and reproducible design computation.}\par
+\vfill
+\begin{tabularx}{\textwidth}{@{}L{34mm}Y@{}}
+\FSOLabel{Version} & \FSOSpecVersion\\
+\FSOLabel{Status} & Candidate specification; prepared from recovered 561 implementation evidence and current design directives.\\
+\FSOLabel{Build profile} & XeLaTeX / R-derived tokens / A4 / two-sided / artifact-ready\\
+\FSOLabel{Core principle} & 2047, but comfortable: futuristic through capability and information, not decorative sci-fi noise.\\
+\end{tabularx}
+\vspace{8mm}
+\end{titlepage}
+
+% ---------------------------------------------------------------------------
+% FRONT MATTER
+% ---------------------------------------------------------------------------
+\pagenumbering{roman}
+\chapter*{Document control}
+\addcontentsline{toc}{chapter}{Document control}
+
+\StatusLine{Specification}{candidate}
+\StatusLine{Token validation}{\FSOTokenValidation}
+\StatusLine{Recovered core set}{\FSOTokenCount}
+
+\begin{specbox}
+This document is both a \emph{design manual} and an executable design specimen. The rules that govern this PDF are the same rules being specified. The intended canonical source is not the prose alone: it is the combination of (1) medium-independent design tokens, (2) normative semantic rules, (3) renderer profiles such as \texttt{561design.sty}, and (4) conformance tests.
+\end{specbox}
+
+The 561 Group already has a coherent visual language, but it exists in several layers of evidence rather than one accepted specification. The current web-estate registry explicitly warns that historical repositories, deployment state, and self-declarations are evidence rather than authority. This Bible therefore treats recovered implementations as observations, reconciles them with current Group direction, and labels new decisions as candidate rules rather than pretending that every old CSS declaration was canonical.
+
+\section*{What this document is for}
+The Bible exists so that a person, agent, renderer, or build system can answer questions such as:
+\begin{itemize}
+  \item Which visual decisions are shared across the Group, and which belong to a habitat such as Lenticule Science or Coesite Operations?
+  \item Which values are machine-readable tokens rather than ad-hoc styling choices?
+  \item How should the same semantics render into web, LaTeX/PDF, SVG, print, and future TUFTE projections?
+  \item What does a conforming 561 document look like when no designer is present to ``make it look right'' by hand?
+  \item Which choices are prohibited because they create drift, reduce accessibility, or substitute fashionable appearance for durable identity?
+\end{itemize}
+
+\section*{Normative vocabulary}
+The verbs \MUST, \MUSTNOT, \SHOULD, \SHOULDNOT, and \MAY are used as conformance language. This is intentionally stricter than a mood board. A design system that cannot reject a bad build is only a collection of preferences.
+
+\section*{Authority model}
+\begin{tabularx}{\textwidth}{@{}L{31mm}L{32mm}Y@{}}
+\toprule
+Layer & Status in this Bible & Treatment\\
+\midrule
+Current Group directives & normative input & Preserved unless internally inconsistent or impossible to render accessibly.\\
+Web-estate registry & strong governance evidence & Defines web-estate control-root and TUFTE direction; explicitly rejects accidental authority by deployment or README.\\
+Current 561 theme package & recovered implementation evidence & Strong evidence for palette, type families, hard hierarchy, folio/hero/colophon, and zero-radius geometry.\\
+Current small static apex & deployment evidence & Useful for reading measure, gutters, dark-mode values, and minimal content styling; not canonical identity by itself.\\
+Historical Hugo theme & provenance & Strong evidence for Bauhaus/Brutalist/Tuftean intent, evidence typography, document surfaces, bibliography, print behavior, and reduced-motion handling.\\
+This Bible v0.4 & candidate synthesis & Proposed single source of visual truth pending institutional adoption and implementation feedback.\\
+\bottomrule
+\end{tabularx}
+
+\Source{https://github.com/561-group/561-group/blob/main/sites/README.md}
+\Source{https://github.com/561-group/561-group/blob/main/sites/registry.json}
+\Source{https://github.com/561-group/561-group-website-theme/blob/main/src/index.mts}
+\Source{https://github.com/561-group/561-group-site/blob/main/public/index.html}
+\Source{https://github.com/emsenn/561-hugo-theme/blob/main/static/style.css}
+
+\clearpage
+\tableofcontents
+\clearpage
+
+\chapter*{The twelve rules}
+\addcontentsline{toc}{chapter}{The twelve rules}
+\FSOSectionPlate{FSOWitness}{One-page operating doctrine}{If a renderer remembers only one spread, remember this one.}
+\vspace{1em}
+
+\begin{enumerate}
+  \item \textbf{Semantics precede styling.} Content/state becomes a form model, then topology, then medium-specific styling. CSS, LaTeX, and PDF are projections, not identity authorities.
+  \item \textbf{The house is 2047, but comfortable.} It may feel wildly advanced, but never hostile, generic-cyberpunk, glossy-startup, or synthetic for its own sake.
+  \item \textbf{Type is mass.} Display sans carries institutional force; slab serif carries reading; mono carries evidence, apparatus, labels, code, and receipts.
+  \item \textbf{Bone and ink dominate.} Witness blue and alarm red are scarce semantic devices, not decorative paint.
+  \item \textbf{One region, one salience.} Do not make every element loud. The eye should know what matters before it reads.
+  \item \textbf{Hard hierarchy beats ornament.} Use scale, spacing, rules, alignment, and typographic contrast before adding decoration.
+  \item \textbf{Every habitat is related, not identical.} 561, Lenticule, Red Cup, Coesite, Causeway, Koios, and other properties inherit shared grammar but may express mission-specific material worlds.
+  \item \textbf{Figures are evidence.} Captions say what a figure demonstrates, its source/provenance, and limits. Decorative illustration never substitutes for information.
+  \item \textbf{Accessibility is a design input.} Contrast, focus, motion, reading measure, hierarchy, print behavior, alt text, and semantic structure are conformance requirements.
+  \item \textbf{The system is tokenized.} Core decisions live in DTCG-compatible design tokens and are transformed into medium profiles.
+  \item \textbf{Builds are reproducible.} R computes/validates design data; LaTeX renders; CI checks; artifacts are versioned. No human hand-tuning after the build is the normal path.
+  \item \textbf{No parallel branding systems.} New needs extend the shared system or explicitly declare a habitat exception; they do not silently invent another identity.
+\end{enumerate}
+
+\clearpage
+\pagenumbering{arabic}
+
+% ---------------------------------------------------------------------------
+\chapter{Precedent: what a real design Bible is}
+
+The closest real-world analog is not an ordinary ``brand book.'' A durable design Bible combines the authority and exactness of a graphics standards manual, the reusable components and tokens of a design system, the accessibility obligations of a public service standard, and the build/test discipline of software infrastructure.
+
+\section{Reference model}
+\begin{tabularx}{\textwidth}{@{}L{34mm}L{35mm}Y@{}}
+\toprule
+Precedent & What 561 should borrow & What not to copy blindly\\
+\midrule
+NASA Graphic Standards & A single comprehensive identity authority; exact identifier construction/placement; consistency across media. & NASA's marks, exact aesthetic, or institution-specific legal restrictions.\\
+USWDS & Design principles, tokens, accessibility as foundation, continuity across services, user needs and trust as system-level constraints. & Federal-government visual voice as such.\\
+GOV.UK Design System & Explicit spacing/type scales, reuse-before-invention, conventions with strong implementation guidance. & GOV.UK's specific brand appearance.\\
+DTCG 2025.10 & Vendor-neutral JSON token source; aliases/groups; platform-agnostic design decisions. & Treating tokens as the whole design system; they are only one layer.\\
+WCAG 2.2 & Contrast, focus, motion and interaction constraints as acceptance criteria. & Reducing accessibility to contrast alone.\\
+Carbon 2x Grid & A geometric foundation tying layout, typography, iconography, and illustration together. & IBM's product visual identity.\\
+ISO 216 + PDF/A & Stable page geometry and archival-output thinking. & Assuming one trim or archival profile suits every publication.\\
+\bottomrule
+\end{tabularx}
+
+\begin{evidencebox}
+NASA describes its graphics standards as a means of maintaining a clear, consistent visual identity. USWDS explicitly treats accessibility as fundamental and tokens as discrete palettes for typography, spacing, color, and other style decisions. GOV.UK publishes explicit spacing and type scales. The Design Tokens Community Group published its first stable interoperable format in October 2025. These are the behaviors this Bible is trying to emulate: visible rules, machine reuse, conformance, and maintenance.
+\end{evidencebox}
+
+\Source{https://www.nasa.gov/nasa-brand-center/brand-guidelines/}
+\Source{https://designsystem.digital.gov/design-principles/}
+\Source{https://designsystem.digital.gov/design-tokens/}
+\Source{https://design-system.service.gov.uk/styles/}
+\Source{https://www.w3.org/community/reports/design-tokens/CG-FINAL-format-20251028/}
+\Source{https://www.w3.org/WAI/standards-guidelines/wcag/}
+\Source{https://www.carbondesignsystem.com/building-blocks/foundations/2x-grid/guidelines}
+\Source{https://www.iso.org/standard/36631.html}
+\Source{https://pdfa.org/resource/iso-19005-pdfa/}
+
+\section{The 561 document class}
+A mature 561 visual specification should have four coupled forms:
+\begin{enumerate}
+  \item \textbf{Bible}: human-readable rationale, examples, prohibitions, and visual plates.
+  \item \textbf{Tokens}: machine-readable decisions with versioning and aliases.
+  \item \textbf{Renderer profiles}: LaTeX package, CSS/TUFTE theme, SVG/TikZ macros, presentation profile.
+  \item \textbf{Conformance suite}: automated checks plus a small set of golden visual specimens.
+\end{enumerate}
+
+\begin{specbox}
+A visual rule is not fully admitted until it has a human explanation, a token or renderer representation where applicable, and at least one conformance method. Rules that cannot yet meet that bar remain informative or experimental.
+\end{specbox}
+
+\clearpage
+% ---------------------------------------------------------------------------
+\chapter{Recovered 561 visual strata}
+
+\section{The strongest inherited signals}
+The recovered material is remarkably consistent despite being distributed across generations:
+\begin{itemize}
+  \item Bauhaus composition, brutalist typography, constructivist poster logic, Cubist fragmentation where useful, and Tuftean information design.
+  \item Few colors; scarce salience; bone/paper ground; ink marks; one warm alarm red; one witness/reference blue.
+  \item Wide reading measure discipline, strong rules, square geometry, and clear folio/metadata furniture.
+  \item Typography split by role: expressive/institutional display, long-form reading, and monospaced evidence/apparatus.
+  \item Print is not an afterthought: historical CSS already removes motion, flattens document cards, exposes URLs, and protects figures from bad page breaks.
+  \item The current web control-root says the final 561.group projection should derive from structured source; visual style is a parameter of the projection, not a standalone static theme.
+\end{itemize}
+
+\section{Recovered values that become candidate core}
+\begin{tabularx}{\textwidth}{@{}L{33mm}L{43mm}Y@{}}
+\toprule
+Decision & Recovered evidence & Candidate decision\\
+\midrule
+Core ink & \texttt{\#0A0A0A} in current theme & Adopt as \nolinkurl{color.ink}.\\
+Core ground & \texttt{\#F2EAD8} in current theme & Adopt as \nolinkurl{color.bone}.\\
+Witness blue & \texttt{\#3D5588} current theme & Adopt as general 561 evidence/reference blue.\\
+Alarm red & \texttt{\#FF4530} current theme & Adopt with stricter accessibility/use constraints.\\
+Display family & Space Grotesk named in theme source & Adopt as preferred; renderer must provide local fallback.\\
+Reading family & Roboto Slab named in theme source & Adopt as preferred core reading face.\\
+Evidence family & JetBrains Mono named in theme source & Adopt as preferred evidence/code face.\\
+Web max/gutter & 1200px / 56px current theme & Adopt as web defaults, not universal geometry.\\
+Reading measure & 42rem current site/theme & Adopt as web long-form target.\\
+Corner radius & 0 current theme & Adopt as core; exceptions must belong to a habitat/component need.\\
+\bottomrule
+\end{tabularx}
+
+\begin{alarmbox}
+The recovered 561 website-theme repository is itself listed as \emph{quarantine} in the web-estate registry. This Bible does not silently promote that package to authority. It promotes specific values only where they agree with current direction and form a coherent cross-medium system.
+\end{alarmbox}
+
+\clearpage
+% ---------------------------------------------------------------------------
+\chapter{North star: 2047, but comfortable}
+
+\FSOSectionPlate{FSOInk}{House character}{Wildly futuristic; humanly inhabitable.}
+\vspace{1em}
+
+The 561 house should look like an institution that has spent twenty years learning how to make complex systems legible, rather than a company that discovered a fashionable science-fiction skin last quarter. The future is conveyed through capability: better information structure, live evidence, unusual but coherent instruments, rigorous diagrams, computational typography, and calm interaction with sophisticated systems.
+
+\section{Positive definition}
+\begin{specbox}
+A conforming 561 surface \MUST feel durable, information-dense, purposeful, tactile, and habitable. It \SHOULD combine modernist institutional clarity with enough strangeness to imply that the system is doing work ordinary interfaces do not yet do.
+\end{specbox}
+
+The material vocabulary is allowed to evoke paper, enamel, limestone, concrete, brushed metal, lab glass, archival folders, engineering drawings, phosphor/instrument displays, transit signage, civic forms, field notebooks, and scientific plates. Digital surfaces may be highly dynamic, but their underlying geometry should remain comprehensible.
+
+\section{Negative definition}
+\begin{alarmbox}
+The default 561 style \MUSTNOT collapse into generic ``AI startup'' presentation: no ambient purple/blue gradient fog, glassmorphism as filler, feature-card monoculture, random glowing orbs, faux-terminal decoration, undifferentiated dashboard grids, or cyberpunk noise used merely to signal futurity.
+\end{alarmbox}
+
+Nor should ``brutalist'' mean careless. Hard edges, large type, visible rules, and dense apparatus are only valuable when the hierarchy is more legible as a result.
+
+\section{Three simultaneous readings}
+A strong 561 page should work at three distances:
+\begin{enumerate}
+  \item \textbf{Across the room}: silhouette, dominant hierarchy, identity, and main state are obvious.
+  \item \textbf{At reading distance}: argument and navigation are calm, generous, and legible.
+  \item \textbf{Under inspection}: provenance, metadata, data, citations, state, and machine-readable structure are available without a second visual language.
+\end{enumerate}
+
+\clearpage
+% ---------------------------------------------------------------------------
+\chapter{Identity architecture}
+
+\section{One house, multiple habitats}
+The Group is not a monobrand painted onto every subsidiary. It is a shared grammar that supports distinct institutional habitats. Continuity comes from type channels, evidence furniture, token naming, rules, layout logic, accessibility, and provenance---not from forcing every site to use exactly the same background and accent.
+
+\begin{tikzpicture}[node distance=8mm]
+\tikzset{box/.style={draw=FSOInk,fill=FSOPaperWhite,sharp corners,minimum height=10mm,text width=31mm,align=center,font=\FSOEvidence\fontsize{7}{8}\selectfont}}
+\node[box,fill=FSOInk,text=FSOBone] (core) {561 CORE\\tokens + grammar};
+\node[box,below left=of core,xshift=-18mm] (science) {LENTICULE\\science habitat};
+\node[box,below=of core] (eng) {RED CUP\\engineering habitat};
+\node[box,below right=of core,xshift=18mm] (ops) {COESITE\\operations habitat};
+\node[box,below=of eng,yshift=-9mm] (civic) {CAUSEWAY\\civic/service habitat};
+\draw[->,line width=.8pt,FSOWitness] (core)--(science);
+\draw[->,line width=.8pt,FSOWitness] (core)--(eng);
+\draw[->,line width=.8pt,FSOWitness] (core)--(ops);
+\draw[->,line width=.8pt,FSOWitness] (core)--(civic);
+\end{tikzpicture}
+
+\section{Inheritance law}
+\begin{specbox}
+A habitat \MAY override surface color, material cues, display composition, iconography, and certain component details. It \MUST inherit semantic token roles, typography channels or approved equivalents, accessibility thresholds, provenance treatment, content-state grammar, and the no-parallel-branding rule.
+\end{specbox}
+
+\section{Marks and identifiers}
+The giant ``561'' mark in recovered web chrome is useful as a typographic institutional device. It is not sufficient to define a corporate identifier standard. A later mark annex should specify minimum size, exclusion zone, small-format behavior, lockups, monochrome use, reproduction tests, and whether the three-digit mark is formally a logo or merely display typography.
+
+Until that annex exists:
+\begin{itemize}
+  \item Use the wordmark/name and large ``561'' typographic mark conservatively.
+  \item Do not invent alternate emblems, mascots, badges, seals, or subbrand logos merely to fill space.
+  \item Do not stretch, outline, shadow, bevel, or gradient-fill the mark.
+  \item Prefer typographic identity over ungoverned logo proliferation.
+\end{itemize}
+
+\clearpage
+% ---------------------------------------------------------------------------
+\chapter{Token architecture}
+
+\section{Why tokens are the source of truth}
+The DTCG 2025.10 format is a strong fit for 561 because it explicitly expresses platform-agnostic design decisions in JSON and is intended for exchange among tools. The Group should not invent a private color/token serialization unless a missing requirement can be demonstrated.
+
+\begin{specbox}
+Core visual primitives \MUST be represented in \texttt{tokens/561.tokens.json} or a successor DTCG-compatible source. Medium renderers \MUST derive from tokens wherever the DTCG model can represent the decision without loss.
+\end{specbox}
+
+\section{Four token tiers}
+\begin{tabularx}{\textwidth}{@{}L{31mm}L{39mm}Y@{}}
+\toprule
+Tier & Example & Rule\\
+\midrule
+Primitive & \nolinkurl{color.ink} & Physical value with minimal semantics.\\
+Semantic & \nolinkurl{text.primary}, \nolinkurl{evidence.witness} & Meaning, not medium. Prefer aliases to primitives.\\
+Habitat & \nolinkurl{habitat.coesite.surface} & Mission-specific expression inheriting semantic roles.\\
+Medium & \nolinkurl{latex.rule.strong}, \nolinkurl{web.gutter} & Rendering decisions needed because physical media differ.\\
+\bottomrule
+\end{tabularx}
+
+\section{Naming rules}
+Token names \SHOULD read from broad category to specific role. Do not encode implementation accidents such as \texttt{blue-3-button-hover} when the stable semantic role is \texttt{action.focus}. Names should survive a palette redesign.
+
+\begin{examplebox}[title={GOOD / BAD}]
+\begin{tabularx}{\linewidth}{@{}L{.42\linewidth}Y@{}}
+\toprule
+Prefer & Avoid\\
+\midrule
+\nolinkurl{color.witness} & \texttt{medium-blue}\\
+\texttt{evidence.rule} & \texttt{1px-gray-line}\\
+\texttt{type.evidence} & \texttt{jetbrains}\\
+\texttt{space.7} & \texttt{big-padding}\\
+\bottomrule
+\end{tabularx}
+\end{examplebox}
+
+\section{Projection contract}
+\begin{tikzpicture}[node distance=4mm]
+\tikzset{stage/.style={draw=FSOInk,fill=FSOPaperWhite,sharp corners,text width=32mm,minimum height=11mm,align=center,font=\FSOEvidence\fontsize{7}{8}\selectfont}}
+\node[stage] (state) {STRUCTURED\\561 SEMANTICS};
+\node[stage,right=of state] (form) {FORM\\MODEL};
+\node[stage,right=of form] (tufte) {TUFTE\\TOPOLOGY + TILING};
+\node[stage,below=of tufte] (tokens) {DESIGN TOKENS\\+ HABITAT};
+\node[stage,left=of tokens] (profile) {MEDIUM\\PROFILE};
+\node[stage,left=of profile] (out) {HTML / PDF\\SVG / PRINT};
+\draw[->,FSOWitness,line width=.8pt] (state)--(form);
+\draw[->,FSOWitness,line width=.8pt] (form)--(tufte);
+\draw[->,FSOWitness,line width=.8pt] (tufte)--(tokens);
+\draw[->,FSOWitness,line width=.8pt] (tokens)--(profile);
+\draw[->,FSOWitness,line width=.8pt] (profile)--(out);
+\end{tikzpicture}
+
+TUFTE remains the Group presentation/projection engine boundary. The acronym expansion is currently disputed in the registry, so this Bible treats \emph{TUFTE} as the canonical name and does not settle the expansion by fiat.
+
+\clearpage
+% ---------------------------------------------------------------------------
+\chapter{Color system}
+
+\FSOSectionPlate{FSOWitness}{Core palette}{Few devices. Scarce salience. Strong semantic roles.}
+\vspace{1em}
+
+\section{Core colors}
+\begin{minipage}[t]{.48\textwidth}
+\FSOColorChip{FSOInk}{Ink}{\#0A0A0A}\\[10pt]
+\FSOColorChip{FSOBone}{Bone}{\#F2EAD8}\\[10pt]
+\FSOColorChip{FSOWitness}{Witness}{\#3D5588}\\[10pt]
+\FSOColorChip{FSOAlarm}{Alarm}{\#FF4530}
+\end{minipage}\hfill
+\begin{minipage}[t]{.48\textwidth}
+\FSOColorChip{FSOInkSoft}{Ink soft}{\#494742}\\[10pt]
+\FSOColorChip{FSORule}{Rule}{\#CDC6B7}\\[10pt]
+\FSOColorChip{FSODarkGround}{Dark ground}{\#120C02}\\[10pt]
+\FSOColorChip{FSOPaperWhite}{Paper white}{\#FFFDF7}
+\end{minipage}
+
+\section{Semantic roles}
+\begin{itemize}
+  \item \textbf{Ink}: primary text, primary rules, institutional marks, strong borders.
+  \item \textbf{Bone}: default Group ground and warm paper field.
+  \item \textbf{Witness}: citations, links, verification, selected state, evidence paths, informational emphasis.
+  \item \textbf{Alarm}: action, exception, consequence, hazard, or a deliberately singular high-salience moment.
+  \item \textbf{Ink soft}: metadata and secondary apparatus that remains readable.
+  \item \textbf{Rule}: low-salience dividers, table rules, scaffolding.
+\end{itemize}
+
+\begin{specbox}
+Witness and alarm colors are semantic. They \MUSTNOT be distributed merely to make a page ``more colorful.'' A local composition \SHOULD have one primary accent role; if both witness and alarm are active, their meanings must be unambiguous.
+\end{specbox}
+
+\section{Computed contrast}
+The following table is generated from the token source by the R build step. Normal-text PASS uses a 4.5:1 threshold; large/UI PASS uses 3:1 as a practical minimum. The table is not a substitute for full WCAG conformance, but it catches the easiest palette mistakes automatically.
+
+\IfFileExists{generated/contrast-table.tex}{\input{generated/contrast-table.tex}}{Contrast table not generated.}
+
+\begin{alarmbox}
+Alarm red on bone fails text contrast. Therefore \textbf{alarm red is not a body-text color on the default bone ground}. Use it as a rule, mark, fill with ink text, or place it against ink where contrast is sufficient. This is exactly why design computation belongs in the build rather than in taste alone.
+\end{alarmbox}
+
+\section{Dark mode}
+Dark mode is a real medium profile, not inversion. The recovered static apex uses a brown-black ground rather than neutral black. A conforming dark profile should preserve the semantic relationships among ink, witness, alarm, rule, and surface while recomputing contrast, not mechanically swap foreground/background values.
+
+\clearpage
+% ---------------------------------------------------------------------------
+\chapter{Typography}
+
+\section{Three channels}
+The 561 type system is intentionally triadic.
+
+\begin{tabularx}{\textwidth}{@{}L{30mm}L{42mm}Y@{}}
+\toprule
+Channel & Preferred family & Job\\
+\midrule
+Display & Space Grotesk & Institutional force, hero marks, chapter openers, large wayfinding, short declarations.\\
+Reading & Roboto Slab & Long-form prose, explanations, essays, reports, durable reading surfaces.\\
+Evidence & JetBrains Mono & Folios, metadata, labels, code, measurements, identifiers, receipts, compact navigation.\\
+\bottomrule
+\end{tabularx}
+
+This PDF uses locally available fallbacks when the preferred faces are not installed. A production repository should either self-host properly licensed font files or install them in the controlled build environment; renderers must never silently fetch web fonts at runtime.
+
+\section{Specimen}
+{\FSODisplay\bfseries\fontsize{30}{32}\selectfont The institution speaks in mass.}\par
+\vspace{7pt}
+{\FSOReading\fontsize{12}{17}\selectfont The reading face carries sustained argument without turning every paragraph into a poster. Its slab structure keeps enough mechanical character to belong beside diagrams, tables, and operating evidence.}\par
+\vspace{7pt}
+{\FSOEvidence\fontsize{8}{10.5}\selectfont locus=urn:561:visual:typography / state=candidate / measure=112mm / build=deterministic}\par
+
+\section{Scale}
+Use a constrained modular scale rather than arbitrary font sizes. The candidate base is 10.25pt for A4 print and 1.0625rem for long-form web reading, with a 1.25 ratio for major steps. Extreme display sizes may escape the scale when used as singular typographic architecture rather than paragraph hierarchy.
+
+\begin{tabularx}{\textwidth}{@{}L{28mm}L{24mm}Y@{}}
+\toprule
+Role & Nominal print size & Use\\
+\midrule
+Evidence micro & 7--8pt & folio, metadata, provenance, figure apparatus\\
+Caption / note & 8.5--9pt & captions, callouts, compact tables\\
+Body & 10.25pt & long-form text\\
+Lead & 12--14pt & opening summaries, pull statements\\
+Section & 18--20pt & second-level hierarchy\\
+Chapter & 30--34pt & major section identity\\
+Hero & 60pt+ & singular marks / title plates only\\
+\bottomrule
+\end{tabularx}
+
+\begin{specbox}
+Never use font weight, uppercase, letterspacing, color, and size simultaneously unless the element genuinely carries multiple hierarchical roles. Evidence labels are the main exception: small uppercase mono with tracking is an intentional apparatus convention.
+\end{specbox}
+
+\section{Line length and rhythm}
+Long-form web text targets approximately 42rem as recovered from the current theme. Print targets approximately 112mm for the primary reading measure on A4. Narrower measures are acceptable for notes and compact components; wider measures require columns or a different reading task.
+
+\clearpage
+% ---------------------------------------------------------------------------
+\chapter{Spatial system and grid}
+
+\section{Spacing ladder}
+The spacing system is a named ladder, not a bag of numbers. Medium profiles map abstract steps into physical values. On web, step 7 corresponds to the recovered 56px default gutter; on small screens the current implementation reduces the gutter to 24px.
+
+\begin{tikzpicture}
+\foreach \name/\w in {1/.25,2/.5,3/.75,4/1.0,5/1.5,6/2.0,7/3.5,8/5.0} {
+  \fill[FSOWitness!65] (0,-\name*.55) rectangle (\w,-\name*.55+.28);
+  \node[anchor=west,font=\FSOEvidence\fontsize{7}{8}\selectfont] at (5.3,-\name*.55+.13) {space.\name};
+}
+\end{tikzpicture}
+
+\section{Grid law}
+The grid is a geometric relationship among content, not a visible cage. It should explain alignment across titles, prose, figures, tables, annotations, and controls.
+
+\begin{specbox}
+A 561 composition \MUST use a small number of repeatable alignment lines. It \SHOULD expose generous negative space around major hierarchy changes and compress spacing inside strongly related evidence clusters.
+\end{specbox}
+
+\section{A4 print profile}
+This Bible uses ISO A4 as the canonical standards-manual trim: 210 by 297mm. The candidate profile uses 22mm inner, 38mm outer, 20mm top, and 24mm bottom margins. The wider outer field is reserved for apparatus, notes, and visual breathing room. US Letter is a required alternate production target, but the system does not treat page-size changes as simple global scaling.
+
+\begin{tikzpicture}[scale=.72]
+  \fill[FSOPaperWhite] (0,0) rectangle (10.5,14.85);
+  \draw[FSOInk,line width=.7pt] (0,0) rectangle (10.5,14.85);
+  \fill[FSOBone] (1.1,1.2) rectangle (7.0,13.85);
+  \draw[FSOWitness,line width=.8pt] (1.1,1.2) rectangle (7.0,13.85);
+  \fill[FSOWitness!12] (7.35,1.2) rectangle (9.65,13.85);
+  \node[rotate=90,font=\FSOEvidence\fontsize{7}{8}\selectfont] at (8.5,7.4) {OUTER APPARATUS / NOTES / FIGURE FIELD};
+  \node[font=\FSOEvidence\fontsize{7}{8}\selectfont] at (4.05,7.4) {PRIMARY READING FIELD};
+  \node[anchor=west,font=\FSOEvidence\fontsize{7}{8}\selectfont] at (0,-.4) {A4 conceptual anatomy (not to scale)};
+\end{tikzpicture}
+
+\section{Web profile}
+Web content can expand to a 1200px institutional frame, but reading text remains measure-constrained. Wide space is used for navigation, side apparatus, visualizations, or topology---not to stretch prose across the viewport.
+
+\clearpage
+% ---------------------------------------------------------------------------
+\chapter{Rules, edges, shape, and texture}
+
+\section{Rules are structural language}
+Recovered 561 work repeatedly uses borders and rules to establish hierarchy. This is preferable to nested shadows, cards, and soft floating surfaces.
+
+\begin{tabularx}{\textwidth}{@{}L{30mm}L{28mm}Y@{}}
+\toprule
+Rule & Candidate weight & Meaning\\
+\midrule
+Hairline & 0.3pt / 1px-ish & low-salience alignment, table interior\\
+Standard & 0.8pt & component edge, section divider\\
+Strong & 2pt & major block / active structure\\
+Institutional & 8px web equivalent & folio/colophon/identity bar, rare\\
+\bottomrule
+\end{tabularx}
+
+\section{Corners}
+Core 561 geometry is square-cornered. Radius is zero in the current theme specification. Small rounding may be admitted within a habitat where it expresses a material or interaction need, but indiscriminate rounded-card UI is not house style.
+
+\section{Texture}
+The current web theme uses a subtle 4px radial dot texture on the bone background. This is admissible because it gives the digital surface a physical grain without competing with content. Print defaults to flat ground to prevent unnecessary toner/ink and moiré.
+
+\begin{specbox}
+Texture \MUST be low-contrast and subordinate. It \MUSTNOT reduce text contrast or become the primary signifier of ``futurism.''
+\end{specbox}
+
+\clearpage
+% ---------------------------------------------------------------------------
+\chapter{Information design}
+
+\section{Tuftean, not Tufte cosplay}
+The 561 system uses ``Tuftean'' to mean an information ethic: make evidence legible; maximize meaningful comparison; integrate words, numbers, and graphics; avoid decoration that obscures reasoning. It does not mean copying the visual appearance of a particular Tufte book.
+
+\section{Captions are evidence}
+A figure caption should answer at least two of these questions: What am I looking at? What does it demonstrate? Where did it come from? When was it observed? What is uncertain? What should I compare?
+
+\begin{examplebox}[title={CAPTION ANATOMY}]
+\textbf{Figure 7. Deployment witness topology.} The diagram distinguishes semantic source, renderer, deployment actuator, and public readback so a live URL cannot silently become identity authority. \textit{Source: 561 web-estate consolidation registry, observed 2026-10-06.}
+\end{examplebox}
+
+\section{Tables}
+Tables are for comparison, not boxed decoration. Prefer light horizontal rules, aligned numeric columns, explicit units, and a meaningful row order. Avoid alternating zebra stripes unless rows are genuinely hard to track.
+
+\section{Figures and diagrams}
+Preferred figure types include:
+\begin{itemize}
+  \item topology and dependency diagrams;
+  \item annotated screenshots when interface evidence is needed;
+  \item scientific/engineering schematics;
+  \item small multiples and comparative matrices;
+  \item maps when geography is causal or operational;
+  \item timelines when sequence matters;
+  \item deterministic Bauhaus/geometric image macros when a concept benefits from abstraction.
+\end{itemize}
+
+\begin{alarmbox}
+Decorative generative imagery should never be the default solution to an empty space. Exact typography, UI, diagrams, data graphics, logos/marks, and provenance-sensitive assets belong to deterministic tools or evidence-bearing media.
+\end{alarmbox}
+
+\section{Data visualization}
+A chart \MUST carry units, source/provenance, and a readable encoding without depending solely on hue. Direct labels are preferred to legends when practical. The core palette is too small for many-category charts; data visualization therefore uses a separate functional sequence derived for perceptual separation, while reserving witness/alarm semantics for their system meanings.
+
+\clearpage
+% ---------------------------------------------------------------------------
+\chapter{Imagery and visual assets}
+
+\section{Asset order of operations}
+The Group's visual-asset service should operate as a demand-led internal service, not an image-generation hobby. The preferred order is:
+\begin{enumerate}
+  \item identify consuming office/project and downstream use;
+  \item check for an existing admissible asset;
+  \item rank the missing asset by reuse, communication value, revenue/operational value, urgency, and uniqueness;
+  \item use the least lossy production method: deterministic diagram/vector, documentary image, fabricated object/render, or generative image where actually appropriate;
+  \item record provenance, rights, accessibility text, and correction/supersession state.
+\end{enumerate}
+
+\section{Photography}
+Photography should feel documentary, situated, and material. Prefer real environments, people doing real work, instruments, field conditions, ecological scenes, manufacturing/operations, civic places, and evidence of systems in use. Avoid generic stock-photo affect.
+
+\section{Generated imagery}
+Generated imagery may be appropriate for abstract editorial concepts, exploratory world-building, or reusable visual macros. It is not appropriate for evidence, exact UI, exact product representation, marks/logos, or contexts whose provenance must be documentary.
+
+\begin{specbox}
+Every externally used generated image \SHOULD have a provenance sidecar and alt text. A model-generated asset \MUSTNOT be presented as documentary evidence of a real event, place, person, product, or measurement.
+\end{specbox}
+
+\section{Deterministic visual macros}
+The most 561-native future path is a library of deterministic SVG/TikZ macros: geometric compositions, topology plates, process diagrams, texture fields, isometric evidence diagrams, and editorial abstractions derived from semantic parameters. This makes visual language inspectable, diffable, and reusable across HTML and LaTeX.
+
+\clearpage
+% ---------------------------------------------------------------------------
+\chapter{Interaction and motion}
+
+\section{Motion has a job}
+Historical 561 web work used page entrance and link pulse motion, with reduced-motion handling. The candidate rule is stricter: motion is admitted when it orients, reveals causality, confirms state, or helps the user preserve context.
+
+\begin{specbox}
+Ambient motion \MUSTNOT be required to perceive structure. Every nonessential animation \MUST be disabled or substantially reduced when the user requests reduced motion.
+\end{specbox}
+
+\section{Focus is visible architecture}
+Keyboard focus should look intentional rather than browser-error accidental. The current apex uses a 3px outline with offset. WCAG 2.2's focus guidance reinforces the principle that focus must remain visible and sufficiently contrasted.
+
+\section{Links}
+Witness blue is the normal interactive/evidence color where color use is appropriate, but links must also have non-color affordance in long-form reading contexts. Hover decoration may add motion; focus must remain obvious without hover.
+
+\clearpage
+% ---------------------------------------------------------------------------
+\chapter{Accessibility and legibility}
+
+\section{Accessibility is upstream}
+Accessibility is not a compliance layer applied after art direction. The visual system must make accessible choices the easiest choices.
+
+\begin{specbox}
+Renderer profiles \MUST define: minimum contrast rules, visible focus treatment, reduced-motion behavior, minimum readable text, logical heading hierarchy, link affordance, table semantics, alt-text/provenance hooks, print behavior, and zoom/reflow resilience appropriate to the medium.
+\end{specbox}
+
+\section{Color}
+The R build computes a basic contrast table for critical core pairs. This must be extended into a linter that rejects forbidden foreground/background token combinations.
+
+\section{Type and measure}
+Readable body type, adequate leading, and constrained line length are mandatory. Extreme tracking, all-caps, or microtext are reserved for short apparatus labels.
+
+\section{PDF accessibility}
+The long-term target is tagged, navigable PDF with meaningful reading order, bookmarks, alt text for figures, embedded fonts, and archival conformance where required. PDF/A addresses long-term visual preservation; PDF/UA should be evaluated for accessibility conformance once the LaTeX toolchain can produce it reliably. The first priority is a stable, inspectable build rather than falsely claiming conformance we have not validated.
+
+\clearpage
+% ---------------------------------------------------------------------------
+\chapter{Component grammar}
+
+\section{Four primary containers}
+This Bible demonstrates four semantic containers:
+
+\begin{specbox}
+Normative blocks carry requirements. They are black-ruled because the primary distinction is authority, not emotion.
+\end{specbox}
+
+\begin{evidencebox}
+Evidence blocks carry provenance, rationale, measurements, or observations. Witness blue indicates that the reader is looking at support for a claim.
+\end{evidencebox}
+
+\begin{alarmbox}
+Exception blocks carry hazards, contradictions, failures, or consequences. Alarm red is a marker at the edge, while the reading text remains ink-on-paper for contrast.
+\end{alarmbox}
+
+\begin{examplebox}
+Examples are pedagogical and non-normative unless explicitly stated. They are deliberately quieter than requirements.
+\end{examplebox}
+
+\section{Cards are not a default}
+Use a bordered card only when an object has an independent identity, state, and interaction boundary. Do not turn ordinary paragraphs, feature lists, or navigation into card grids simply because a component framework makes that easy.
+
+\section{Forms}
+Forms should resemble serious instruments: clear label, instruction, control, unit/format where applicable, validation, and consequence. Avoid placeholder-as-label. Error color must be paired with text/icon/state, never color alone.
+
+\section{Status and metadata}
+Status labels use the evidence channel and compact rectangular framing. They should describe state with unambiguous words: \FSOStatus{candidate}, \FSOStatus{verified}, \FSOStatus{deprecated}, \FSOStatus{blocked}. Avoid vague badges such as ``new'' when a date or state is available.
+
+\clearpage
+% ---------------------------------------------------------------------------
+\chapter{Math, code, proof, and technical documents}
+
+\section{Technical material is first-class}
+561 publications routinely contain equations, code, schemas, measurements, standards references, proofs, diagrams, and execution evidence. The design system must make these feel native rather than pasted in.
+
+\section{Mathematics}
+Mathematics should remain typographically conventional enough to read. Do not force house display typography into formulas. Surrounding labels, theorem state, proof status, and provenance can use the house evidence channel.
+
+\begin{examplebox}[title={MATHEMATICAL PLATE}]
+Let $X$ be a measured state space and $T:X\to X$ an admitted transformation. A visual witness is not merely a picture of $T$; it is a projection $P(T,x)$ whose provenance binds the displayed marks to the source state $x$ and the transformation version.
+\[
+  \text{semantic state} \xrightarrow{\;T\;} \text{form model} \xrightarrow{\;P\;} \text{marks}
+\]
+\end{examplebox}
+
+\section{Code}
+\begin{lstlisting}[language={[LaTeX]TeX},caption={A document using the 561 LaTeX profile.}]
+\documentclass{report}
+\usepackage{561design}
+\begin{document}
+\chapter{Measured work}
+\begin{evidencebox}
+This paragraph is evidence-bearing apparatus.
+\end{evidencebox}
+\end{document}
+\end{lstlisting}
+
+\section{Proof/status apparatus}
+Research documents should distinguish conjecture, observation, derivation, proof, replication, supersession, and editorial commentary. Visual styling may make these states easier to scan, but it must never upgrade epistemic status. A beautiful box cannot turn a conjecture into a theorem.
+
+\clearpage
+% ---------------------------------------------------------------------------
+\chapter{Habitat profile: 561 Group apex}
+
+\FSOSectionPlate{FSOInk}{Habitat / whole institution}{The public institutional house.}
+\vspace{1em}
+
+The apex should feel like the whole system: corporate/institutional, federative, mathematically literate, and durable. It is the calmest habitat because it must host the widest range of topics.
+
+\begin{specbox}
+Apex defaults: bone ground; ink primary; witness blue evidence; alarm red exception/action; display/reading/evidence triad; square geometry; hard folio bars; large typographic ``561'' mark permitted; generous hierarchy; minimal ornament.
+\end{specbox}
+
+\section{Material cues}
+Archival standards manual, field dossier, civic institution, systems map, laboratory report, technical catalog. The apex can borrow cues from every subordinate habitat but should not impersonate any one of them.
+
+\section{Web chrome}
+Recovered web chrome---folio bar, giant 561 hero, monospaced descriptor, inked colophon---is a strong candidate for the apex. The Bible recommends preserving the idea while moving implementation into TUFTE rather than binding identity to one static HTML package.
+
+\clearpage
+% ---------------------------------------------------------------------------
+\chapter{Habitat profile: Lenticule Science}
+
+\FSOSectionPlate{FSOWitness}{Habitat / science}{Clinical brightness, curiosity, instruments, impossible clarity.}
+\vspace{1em}
+
+Lenticule Science may riff on the institutional-science feeling associated with fictional mega-laboratories, but it must be original: no copied marks, props, type treatments, or trade dress. The useful qualities are bright controlled space, instrument labeling, experiment state, test chambers, optical surfaces, and a little unnerving confidence in measurement.
+
+\section{Expression}
+\begin{itemize}
+  \item Bias toward paper white and bone with witness blue, black instrument labels, and restrained glass/gray fields.
+  \item Use grids, calibration marks, specimen identifiers, plots, equations, lab-note marginalia, and experiment state.
+  \item Let curiosity and evidence carry the weirdness; avoid generic neon ``science'' graphics.
+  \item Diagrams and data are the dominant image class.
+\end{itemize}
+
+\begin{examplebox}[title={SCIENCE HEADER}]
+\FSOLabel{Lenticule Science / Experimental record 26-104}\par
+{\FSODisplay\bfseries\fontsize{22}{24}\selectfont Reality rewards curiosity.}\par
+\vspace{3pt}
+{\FSOEvidence\fontsize{8}{10}\selectfont apparatus: optical / state: replicated / witness: three independent runs}
+\end{examplebox}
+
+\clearpage
+% ---------------------------------------------------------------------------
+\chapter{Habitat profile: Red Cup Engineering}
+
+\FSOSectionPlate{FSOAlarm}{Habitat / engineering}{Concrete, steel, instrumentation, test stands, consequence.}
+\vspace{1em}
+
+Red Cup should feel like serious applied engineering inside a slightly impossible research facility. The reference is not game fandom; it is the material logic of industrial research: hazard boundaries, maintenance stencils, equipment IDs, cutaways, test receipts, and systems that can fail in concrete ways.
+
+\section{Expression}
+\begin{itemize}
+  \item Ink, bone, concrete gray, and alarm red are natural dominant materials.
+  \item Use witness blue mainly for verification, documentation, and successful readback rather than as decorative tech-blue.
+  \item Prefer section numbers, equipment labels, cutaway diagrams, interface contracts, test matrices, and failure envelopes.
+  \item Strong rules and visible assembly logic are encouraged.
+\end{itemize}
+
+\begin{alarmbox}[title={ENGINEERING RULE}]
+Red is allowed to be more physically present in Red Cup than at the Group apex, but it still means consequence: hazard, actuator, stop, exception, or the ``cup'' identity moment. Do not make every engineering surface red.
+\end{alarmbox}
+
+\clearpage
+% ---------------------------------------------------------------------------
+\chapter{Habitat profile: Coesite Operations}
+
+\FSOSectionPlate{FSODarkGround}{Habitat / operations}{Subterranean granite, limestone, containment, logistical calm.}
+\vspace{1em}
+
+Coesite should feel like monumental infrastructure below grade: granite/limestone mass, long corridors, durable signage, inventories, access layers, incident boards, maintenance states, and institutional strangeness. It may brush against backrooms/SCP-like spatial uncanniness, but horror is not the default.
+
+\section{Expression}
+\begin{itemize}
+  \item Dark ground, bone type, low-saturation rule colors, and hard illuminated status marks.
+  \item Floor/zone identifiers, location codes, manifests, maintenance stamps, inventories, route maps, and environmental readings.
+  \item Large empty stone-like fields can carry scale, but information-bearing surfaces should remain crisp.
+  \item Avoid distressed ``secret bunker'' cosplay; operations must look usable.
+\end{itemize}
+
+\begin{tikzpicture}
+\fill[FSODarkGround] (0,0) rectangle (\textwidth,3.1);
+\draw[FSOBone,line width=.7pt] (.35,.35) rectangle (\textwidth-.35,2.75);
+\node[anchor=west,text=FSOBone,font=\FSOEvidence\fontsize{8}{10}\selectfont] at (.7,2.25) {COESITE / ZONE 04 / MATERIAL HANDLING};
+\node[anchor=west,text=FSOBone,font=\FSODisplay\bfseries\fontsize{22}{24}\selectfont] at (.7,1.42) {ALIGN. ENABLE. DELIVER.};
+\fill[FSOWitness] (\textwidth-2.2,.62) rectangle (\textwidth-.7,1.0);
+\end{tikzpicture}
+
+\clearpage
+% ---------------------------------------------------------------------------
+\chapter{Habitat profile: Causeway Public Services}
+
+\FSOSectionPlate{FSOWitness}{Habitat / civics}{Impeccable public-service design. Calm authority, clear obligations.}
+\vspace{1em}
+
+Causeway should be the least self-conscious visual system: extremely legible, trustworthy, accessible, procedural, and humane. It can be beautiful, but the beauty comes from service clarity, good typography, excellent forms, and visible accountability.
+
+\section{Expression}
+\begin{itemize}
+  \item Paper white/bone, ink, witness blue, generous whitespace, stable navigation.
+  \item Clear next actions, eligibility, deadlines, costs, ownership, appeal/correction paths, and contact methods.
+  \item Public information should resemble the best civic systems, not consumer SaaS marketing.
+  \item Forms and notices get first-class design attention.
+\end{itemize}
+
+\begin{examplebox}[title={CIVIC SERVICE PANEL}]
+\FSOLabel{Causeway Public Services}\par
+{\FSODisplay\bfseries\fontsize{20}{22}\selectfont People. Places. Together.}\par
+\vspace{4pt}
+\textbf{What this service does.} One sentence in plain language.\\
+\textbf{What you need.} Inputs, eligibility, and time.\\
+\textbf{What happens next.} Explicit consequence and route for correction.
+\end{examplebox}
+
+\clearpage
+% ---------------------------------------------------------------------------
+\chapter{Habitat profile: Koios.News}
+
+\FSOSectionPlate{Koios008}{Habitat / independent media}{News identity is related to the house, but has stricter local invariants.}
+\vspace{1em}
+
+Koios is a sibling public enterprise and should not be swallowed by the apex identity. Its current local visual direction uses royal ``008 blue'' (\texttt{\#000088}) for social-image identity, deterministic isometric/30-degree construction, and a five-blade aperture in which the southeast blade is fully blue. Faux grain is not part of the current direction.
+
+\begin{specbox}
+Koios social imagery \MUST use its local royal blue rather than substituting 561 alarm red. Article-page deterministic steganographic imagery remains a separate system and should not be replaced by generic social-image art.
+\end{specbox}
+
+This is a useful model for Group governance: local habitats can have strict visual invariants while inheriting common provenance, accessibility, and build discipline.
+
+\clearpage
+% ---------------------------------------------------------------------------
+\chapter{Habitat profile: Turntide Islands}
+
+\FSOSectionPlate{FSOWitness}{Habitat / civic climate culture}{Provisional profile: inherit the house until an evidence-backed local system exists.}
+\vspace{1em}
+
+Turntide needs recognizable public identity for advocacy, membership, governance, and supporter participation, but this Bible does not invent a full palette or logo in the absence of settled evidence. Its provisional profile therefore inherits the 561 civic/house grammar and adds only mission-level composition guidance.
+
+\section{Provisional expression}
+\begin{itemize}
+  \item Civic, participatory, climate-aware, human-scale; no apocalypse porn.
+  \item Use maps, island/shoreline/topology diagrams, governance flows, membership pathways, public invitations, and practical climate adaptation artifacts.
+  \item Supporter/membership materials should be welcoming and legible even to people who do not want governance participation.
+  \item Once Turntide has enough real use, derive its local tokens from recurring artifacts rather than designing an ornamental subbrand first.
+\end{itemize}
+
+\clearpage
+% ---------------------------------------------------------------------------
+\chapter{LaTeX as a first-class renderer}
+
+\section{Why LaTeX}
+LaTeX is unusually well matched to 561's needs: mathematical typesetting, bibliographies, cross-references, long technical documents, deterministic builds, stable pagination, and a programmable style layer. It can also act as a target for a more general TUFTE form model rather than as the authoring source for every semantic object.
+
+\section{Repository layout}
+\begin{lstlisting}[caption={Candidate repository layout.}]
+561-visual-design-bible/
+  .github/workflows/build-pdf.yml
+  R/derive_tokens.R
+  tokens/561.tokens.json
+  generated/                 # R-derived build products
+  561design.sty              # LaTeX renderer profile
+  design-bible.tex           # this specification/specimen
+  README.md
+  Makefile
+  LICENSE                     # choose/admit explicitly
+\end{lstlisting}
+
+\section{Package responsibilities}
+\texttt{561design.sty} owns page geometry, font channels/fallbacks, color bindings, hierarchy, folios, tables, semantic callouts, list rhythm, links/bookmarks, code styling, and deterministic visual primitives. It should not own semantic content or business-specific prose.
+
+\section{Renderer API}
+A small stable API is preferable to exposing raw package internals:
+\begin{itemize}
+  \item \verb|specbox| --- normative requirement;
+  \item \verb|evidencebox| --- observation/provenance/rationale;
+  \item \verb|alarmbox| --- hazard/exception/consequence;
+  \item \verb|examplebox| --- non-normative illustration;
+  \item \verb|\FSOLabel{}| --- compact evidence label;
+  \item \verb|\FSOStatus{}| --- explicit state badge;
+  \item \verb|\FSOSectionPlate{}{}{}| --- deterministic section plate;
+  \item \verb|\FSOColorChip{}{}{}| --- palette specimen.
+\end{itemize}
+
+\begin{specbox}
+Document authors \SHOULD use semantic macros rather than direct colors, font switches, or arbitrary TikZ styling. Direct styling is allowed only inside renderer implementation or a documented habitat extension.
+\end{specbox}
+
+\clearpage
+% ---------------------------------------------------------------------------
+\chapter{R as design computation}
+
+\section{Why R belongs in the build}
+R is not being used merely because it can draw charts. It gives the design system a compute stage between raw tokens/data and final publication. That stage can test, derive, summarize, and generate visual evidence before LaTeX renders it.
+
+\section{Current build computation}
+The included \texttt{R/derive\_tokens.R} script:
+\begin{enumerate}
+  \item parses the DTCG token JSON;
+  \item validates that required core colors exist and carry valid hexadecimal extensions;
+  \item computes WCAG relative-luminance contrast ratios for critical pairs;
+  \item emits LaTeX \verb|\definecolor| declarations and specification macros;
+  \item emits a contrast conformance table consumed by this PDF;
+  \item emits a deterministic validation receipt with no wall-clock timestamp.
+\end{enumerate}
+
+\begin{lstlisting}[language=R,caption={Contrast math inside the build.}]
+channel_linear <- function(c)
+  ifelse(c <= 0.04045, c / 12.92, ((c + 0.055) / 1.055)^2.4)
+
+contrast <- function(a, b) {
+  l <- sort(c(luminance(a), luminance(b)), decreasing = TRUE)
+  (l[[1]] + 0.05) / (l[[2]] + 0.05)
+}
+\end{lstlisting}
+
+\section{Next computations to add}
+\begin{itemize}
+  \item forbidden token-pair linting and habitat override validation;
+  \item CIE/OKLCH palette derivation for web dark/light profiles;
+  \item line-length and type-scale reports;
+  \item chart-theme generation for base R/ggplot2 and LaTeX/PGFPlots;
+  \item SVG/TikZ macro generation from semantic/topological data;
+  \item visual regression contact sheets;
+  \item PDF metadata and conformance receipts;
+  \item automated comparison between CSS and LaTeX token outputs.
+\end{itemize}
+
+\clearpage
+% ---------------------------------------------------------------------------
+\chapter{GitHub Actions: source to PDF artifact}
+
+\section{Build contract}
+The repository includes an Actions workflow that builds on changes to the Bible, tokens, LaTeX renderer, R compute, or workflow itself. It also supports manual dispatch and tagged releases.
+
+\begin{tikzpicture}[node distance=5mm]
+\tikzset{b/.style={draw=FSOInk,fill=FSOPaperWhite,sharp corners,text width=29mm,minimum height=11mm,align=center,font=\FSOEvidence\fontsize{7}{8}\selectfont}}
+\node[b] (git) {GIT\\SOURCE};
+\node[b,right=of git] (r) {R\\VALIDATE + DERIVE};
+\node[b,right=of r] (tex) {XeLaTeX\\RENDER};
+\node[b,below=of tex] (check) {PDF\\PREFLIGHT};
+\node[b,left=of check] (artifact) {ACTIONS\\ARTIFACT};
+\node[b,left=of artifact] (release) {TAGGED\\RELEASE};
+\draw[->,FSOWitness,line width=.8pt] (git)--(r);
+\draw[->,FSOWitness,line width=.8pt] (r)--(tex);
+\draw[->,FSOWitness,line width=.8pt] (tex)--(check);
+\draw[->,FSOWitness,line width=.8pt] (check)--(artifact);
+\draw[->,FSOWitness,line width=.8pt] (artifact)--(release);
+\end{tikzpicture}
+
+\section{CI acceptance}
+A CI build should eventually fail when:
+\begin{itemize}
+  \item token validation fails;
+  \item a required contrast pairing violates its threshold;
+  \item XeLaTeX emits a fatal error;
+  \item the PDF has no pages or is corrupt;
+  \item required fonts are not embedded;
+  \item visual golden pages differ unexpectedly;
+  \item accessibility/archival profile checks regress where those profiles are claimed.
+\end{itemize}
+
+\begin{specbox}
+The PDF is an artifact, not the source. Releases may attach PDFs, but the accepted source remains tokens + semantic content + renderer + compute scripts + build workflow.
+\end{specbox}
+
+\clearpage
+% ---------------------------------------------------------------------------
+\chapter{Conformance profiles}
+
+\section{Profile matrix}
+\begin{tabularx}{\textwidth}{@{}L{25mm}L{26mm}Y@{}}
+\toprule
+Profile & Scope & Minimum requirements\\
+\midrule
+V-CORE & any 561 visual & semantic colors, type channels, no parallel identity, provenance rules, accessibility intent\\
+V-DOC & LaTeX/PDF & A4/Letter geometry profiles, hierarchy, figures/captions, tables, PDF metadata, embedded fonts\\
+V-WEB & HTML/TUFTE & responsive gutters/measure, dark/light profile, focus, reduced motion, semantic markup\\
+V-SCI & Lenticule & V-CORE + lab/instrument/evidence habitat rules\\
+V-ENG & Red Cup & V-CORE + engineering/hazard/instrumentation habitat rules\\
+V-OPS & Coesite & V-CORE + operations/zone/inventory habitat rules\\
+V-CIVIC & Causeway & V-CORE + service clarity/forms/public trust rules\\
+V-MEDIA & Koios etc. & V-CORE provenance/accessibility + admitted local identity invariants\\
+\bottomrule
+\end{tabularx}
+
+\section{Claiming conformance}
+A produced artifact may state a profile and version, e.g. \texttt{V-DOC / V-CORE / 0.4-candidate}. It should not simply say ``561 compliant'' once multiple profiles exist.
+
+\section{Golden specimens}
+The conformance repository should maintain a small suite of golden outputs:
+\begin{itemize}
+  \item one-page letter/report;
+  \item long-form technical paper;
+  \item data table + chart + figure plate;
+  \item public-service form/notice;
+  \item science experiment record;
+  \item engineering test report;
+  \item operations status/incident sheet;
+  \item web article and dashboard-like operator surface.
+\end{itemize}
+
+These are not templates to copy blindly; they are regression witnesses.
+
+\clearpage
+% ---------------------------------------------------------------------------
+\chapter{Governance and versioning}
+
+\section{Design changes are\texorpdfstring{\protect\linebreak}{} engineering changes}
+The Bible should be versioned like infrastructure. A palette or type change can affect thousands of artifacts and accessibility behavior; it deserves an explicit change record, migration notes, and tests.
+
+\section{Decision classes}
+\begin{tabularx}{\textwidth}{@{}L{30mm}L{31mm}Y@{}}
+\toprule
+Class & Example & Required handling\\
+\midrule
+Patch & fix incorrect hex, typo, broken macro & tests + patch release\\
+Minor & new component or habitat token & rationale + examples + backwards-compatible renderer update\\
+Major & replace type system or semantic palette roles & migration plan + cross-medium review + visual regression baseline reset\\
+Experimental & new image macro or interaction pattern & isolated namespace; cannot redefine core tokens\\
+\bottomrule
+\end{tabularx}
+
+\section{No silent drift}
+Web, PDF, decks, social images, and software UI will drift unless a machine checks them. The Group should prefer transformations from shared tokens over copy/paste. When a medium needs a nonportable value, the exception belongs in that medium's profile, not in an undocumented local stylesheet.
+
+\section{Visual debt}
+Visual debt includes duplicate token values, untracked local palettes, inaccessible color combinations, ad-hoc page geometry, typography bypasses, stale logo files, ambiguous asset rights, missing alt text, inconsistent correction state, and templates whose implementation no longer matches the Bible.
+
+\clearpage
+% ---------------------------------------------------------------------------
+\chapter{Migration plan from what exists now}
+
+\section{Phase 1: admit the Bible repository}
+\begin{enumerate}
+  \item Place this source package under Group-controlled Git history.
+  \item Choose the permanent repository boundary: dedicated visual-system repository or an admitted section of the Group superrepository.
+  \item Run R + XeLaTeX + preflight on every relevant change.
+  \item Publish build artifacts and checksums from CI.
+\end{enumerate}
+
+\section{Phase 2: unify tokens}
+Translate recovered web palette/type/layout seeds into the DTCG source. Then update the web theme/TUFTE renderer to consume generated outputs rather than owning its own manually typed color values.
+
+\section{Phase 3: cross-medium proof}
+Take one semantic document and render it from the same form/topology source into:
+\begin{itemize}
+  \item HTML/TUFTE;
+  \item LaTeX/PDF;
+  \item deterministic SVG figure/plate;
+  \item plain/accessible fallback representation.
+\end{itemize}
+Compare hierarchy and semantic roles rather than pixel equality.
+
+\section{Phase 4: habitat packages}
+Add Lenticule, Red Cup, Coesite, Causeway, Koios, and other local token groups only after each has real artifacts to test. Local systems extend the house; they do not fork it.
+
+\section{Phase 5: conformance service}
+Build a visual linter that agents can call before publishing. It should report exact failures: token drift, contrast, font embedding, missing provenance, invalid profile claim, unapproved logo use, PDF preflight, and golden-image regression.
+
+\clearpage
+% ---------------------------------------------------------------------------
+\chapter{Implementation checklist}
+
+\section{For a new LaTeX document}
+\begin{enumerate}
+  \item Use XeLaTeX and \texttt{561design.sty}.
+  \item Run \texttt{R/derive\_tokens.R} before compilation.
+  \item Do not define ad-hoc brand colors in the document source.
+  \item Use semantic callouts rather than direct tcolorbox styling.
+  \item Keep long-form measure within the document profile.
+  \item Caption every figure with evidentiary purpose and source/provenance.
+  \item Use mono apparatus for IDs/state/measurements, not for entire prose sections.
+  \item Preflight the PDF, render representative pages, and inspect typography/overflow.
+  \item Embed fonts and record the profile/version in metadata or colophon.
+\end{enumerate}
+
+\section{For a new visual component}
+\begin{enumerate}
+  \item State its semantic purpose.
+  \item Check whether an existing component already covers the purpose.
+  \item Define states, content constraints, accessibility behavior, and failure mode.
+  \item Use semantic tokens.
+  \item Add one normal, one stressed, and one failure specimen.
+  \item Add a conformance test or golden output.
+  \item Only then add it to the renderer API.
+\end{enumerate}
+
+\section{For a new habitat}
+\begin{enumerate}
+  \item Name the mission and material world, not a trendy aesthetic.
+  \item Identify what must remain inherited from V-CORE.
+  \item Collect real artifacts and recurring needs.
+  \item Add the smallest local token extension that explains them.
+  \item Test across at least web + document outputs before declaring it stable.
+\end{enumerate}
+
+\clearpage
+% ---------------------------------------------------------------------------
+\chapter{Token registry}
+
+\small
+\begin{longtable}{@{}L{46mm}L{25mm}L{69mm}@{}}
+\toprule
+Token & Value & Meaning\\
+\midrule
+\endhead
+\nolinkurl{color.ink} & \texttt{\#0A0A0A} & Primary text/mark/rule.\\
+\nolinkurl{color.bone} & \texttt{\#F2EAD8} & Primary warm ground.\\
+\nolinkurl{color.witness} & \texttt{\#3D5588} & Evidence, reference, verification, links/selection.\\
+\nolinkurl{color.alarm} & \texttt{\#FF4530} & Exception, action, consequence; not normal text on bone.\\
+\nolinkurl{color.ink-soft} & \texttt{\#494742} & Secondary apparatus.\\
+\nolinkurl{color.rule} & \texttt{\#CDC6B7} & Low-salience structure.\\
+\nolinkurl{color.dark-ground} & \texttt{\#120C02} & Dark-mode / deep-operations ground.\\
+\nolinkurl{color.paper-white} & \texttt{\#FFFDF7} & High-key figure/component ground.\\
+\nolinkurl{type.family.display} & Space Grotesk & Primary institutional display channel.\\
+\nolinkurl{type.family.reading} & Roboto Slab & Long-form reading channel.\\
+\nolinkurl{type.family.evidence} & JetBrains Mono & Labels, code, IDs, receipts, measurements.\\
+\nolinkurl{type.measure.reading} & 42rem & Web long-form target.\\
+\nolinkurl{type.measure.print-body} & 112mm & A4 long-form target.\\
+\nolinkurl{layout.web.max-width} & 1200px & Institutional web frame.\\
+\nolinkurl{layout.web.gutter} & 56px & Default large-screen web gutter.\\
+\nolinkurl{layout.web.mobile-gutter} & 24px & Current narrow-screen gutter.\\
+\nolinkurl{shape.radius} & 0px & Core square geometry.\\
+\nolinkurl{motion.standard-ms} & 300ms & Ordinary interaction transition ceiling/target.\\
+\nolinkurl{motion.entrance-ms} & 500ms & Existing historical entrance timing reference; use only when orientation benefits.\\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\clearpage
+% ---------------------------------------------------------------------------
+\chapter{Build and release recipe}
+
+\section{Local build}
+\begin{lstlisting}[language=bash]
+Rscript R/derive_tokens.R .
+latexmk -xelatex -interaction=nonstopmode -halt-on-error design-bible.tex
+\end{lstlisting}
+
+\section{Expected products}
+\begin{lstlisting}
+design-bible.pdf
+build/ or generated/ derivation receipts
+CI artifact containing PDF + source checksum
+(optional) tagged release attachment
+\end{lstlisting}
+
+\section{Preflight}
+A release pipeline should run, at minimum:
+\begin{lstlisting}[language=bash]
+qpdf --check design-bible.pdf
+pdfinfo design-bible.pdf
+pdffonts design-bible.pdf
+pdftotext design-bible.pdf - >/dev/null
+\end{lstlisting}
+Then render representative pages to images and compare to accepted golden images. A future archival job may add veraPDF once a specific PDF/A profile is formally claimed.
+
+\clearpage
+% ---------------------------------------------------------------------------
+\chapter{References and precedents}
+
+\begin{thebibliography}{99}
+\bibitem{nasa} NASA. \emph{NASA Brand Center: Graphic Standards}. \url{https://www.nasa.gov/nasa-brand-center/brand-guidelines/}
+\bibitem{uswds-principles} U.S. Web Design System. \emph{Design principles}. \url{https://designsystem.digital.gov/design-principles/}
+\bibitem{uswds-tokens} U.S. Web Design System. \emph{Design tokens}. \url{https://designsystem.digital.gov/design-tokens/}
+\bibitem{govuk-styles} GOV.UK Design System. \emph{Styles}. \url{https://design-system.service.gov.uk/styles/}
+\bibitem{govuk-spacing} GOV.UK Design System. \emph{Spacing}. \url{https://design-system.service.gov.uk/styles/spacing/}
+\bibitem{govuk-type} GOV.UK Design System. \emph{Type scale}. \url{https://design-system.service.gov.uk/styles/type-scale/}
+\bibitem{dtcg} Design Tokens Community Group. \emph{Design Tokens Format Module 2025.10}. \url{https://www.w3.org/community/reports/design-tokens/CG-FINAL-format-20251028/}
+\bibitem{wcag} W3C Web Accessibility Initiative. \emph{Web Content Accessibility Guidelines 2.2}. \url{https://www.w3.org/TR/WCAG22/}
+\bibitem{carbon} IBM Carbon Design System. \emph{2x Grid}. \url{https://www.carbondesignsystem.com/building-blocks/foundations/2x-grid/guidelines}
+\bibitem{iso216} ISO. \emph{ISO 216:2007 — Writing paper and certain classes of printed matter}. \url{https://www.iso.org/standard/36631.html}
+\bibitem{pdfa} PDF Association. \emph{ISO 19005 / PDF-A}. \url{https://pdfa.org/resource/iso-19005-pdfa/}
+\bibitem{webestate} 561 Group. \emph{Web estate control-root README}. \url{https://github.com/561-group/561-group/blob/main/sites/README.md}
+\bibitem{registry} 561 Group. \emph{Web estate registry}. \url{https://github.com/561-group/561-group/blob/main/sites/registry.json}
+\bibitem{theme} 561 Group. \emph{561 Group website theme implementation}. \url{https://github.com/561-group/561-group-website-theme/blob/main/src/index.mts}
+\bibitem{hugo} emsenn. \emph{Historical 561 Hugo theme stylesheet}. \url{https://github.com/emsenn/561-hugo-theme/blob/main/static/style.css}
+\bibitem{tufte-service} Red Cup Engineering. \emph{Web TUFTE GUI Services}. \url{https://github.com/red-cup-engineering/web-tufte-gui-services-section}
+\end{thebibliography}
+
+\clearpage
+% ---------------------------------------------------------------------------
+\chapter*{Colophon}
+\addcontentsline{toc}{chapter}{Colophon}
+
+\begin{tikzpicture}
+\fill[FSOInk] (0,0) rectangle (\textwidth,6.0);
+\node[anchor=west,text=FSOBone,text width=.82\textwidth] at (.7,4.8) {\FSODisplay\bfseries\fontsize{29}{31}\selectfont This document is the specimen.};
+\node[anchor=west,text=FSOBone!78!FSOInk,text width=.82\textwidth] at (.7,3.4) {\FSOReading\fontsize{10.5}{15}\selectfont The design Bible should not describe a visual system that only exists in prose. Its typography, palette, rules, hierarchy, semantic callouts, build computation, and source layout are the first executable implementation of the proposed system.};
+\node[anchor=west,text=FSOBone,text width=.82\textwidth] at (.7,1.8) {\FSOEvidence\fontsize{8}{10}\selectfont SPEC \FSOSpecVersion\quad /\quad TOKEN VALIDATION \FSOTokenValidation\quad /\quad A4 XELATEX};
+\fill[FSOWitness] (.7,.65) rectangle (3.5,1.0);
+\fill[FSOAlarm] (3.7,.65) rectangle (4.45,1.0);
+\end{tikzpicture}
+
+\vspace{1.5em}
+The next institutional move is not to add more prose. It is to admit this source under Group Git history, wire the web/TUFTE renderer to the same token source, render a matched HTML/PDF specimen, and let real use pressure the candidate rules into a stable 1.0.
+
+\end{document}
