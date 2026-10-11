@@ -11,7 +11,14 @@ see-also: [the-three-rules, refusal-as-design-method]
 Voice in the bible is not "tone of voice" in the brand-guide sense.
 It is the operative discipline that the [three rules](the-three-rules.md) name: *be specific, use verbs, refuse the philanthropic register*.
 
-Three working rules carry the weight.
+The short-copy treatment below governs the bible's compact display voice.
+For a corporate article or explanatory page, the
+[developed-public-prose procedure](../../documents/articles/specifications/procedures/voice-substitution.md#developed-public-prose)
+takes precedence over its sentence-length, exact-number, and word-list
+shortcuts. Specificity still requires a clear claim and supported evidence;
+it also requires enough explanation for someone outside the work.
+
+Three working rules carry the weight in compact copy.
 
 1. **Sentences are short because readers are tired.** A two-clause sentence with a verb in the middle reads at a glance; a three-clause sentence with two qualifying phrases reads as a paragraph.
   The slab body of the bible is set at 50–70 characters per line because more characters per line make even a short sentence look like a paragraph.
