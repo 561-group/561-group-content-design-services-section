@@ -12,7 +12,7 @@ Re-use these owners rather than copy their code or data:
 - [Causeway Public Media](https://github.com/causeway-services/public-media-services-section): `MediaNeed`, `MediaReadiness`, allocation reservations, review and distribution; `src/media-demand-{market,journal,dispatch}.mjs` and `src/media-artifact-review-queue.mjs`.
 - [Red Cup Computer Web Engineering](https://github.com/red-cup-engineering/computer-web-engineering-services-section): provider-neutral visual-asset compiler and deterministic Koios composition. Image models render components; typography, trademarks and publication geometry remain software-owned.
 - [561 Group Content Design](../../README.md): the live 561 design bible, visual tokens and governed elements.
-- [561 Group Operational Method](../../../../../content/text/glossary/concepts/method-for-work-in-the-561-group.md): governing work, authority, receiving and independent assay. This file adds only this service's practical interface.
+- [561 Group Operational Method](../../../../content/text/glossary/concepts/method-for-work-in-the-561-group.md): governing work, authority, receiving and independent assay. This file adds only this service's practical interface.
 
 ## Mathematical correspondence
 
