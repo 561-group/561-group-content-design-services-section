@@ -19,3 +19,7 @@ The old FARS register layout, prior HTML editions, and their renderer are retain
 ## Internal service contract
 
 An owned design corpus is not by itself a delivered internal service. A design-service receipt should identify the customer, artifact or surface, requested transformation or assessment, applicable design edition, accountable provider, and customer acceptance evidence.
+
+## Image-generation production labor
+
+The [ChatGPT-Web Image Generation Services Section](services/561-group-chatgpt-web-image-generation-services-section/README.md) is the Group's demand-led hourly **execution/ingress** micro-enterprise. It uses this section's design bible and the existing Red Cup visual compiler, and it consumes the owning Causeway Public Media `MediaNeed`/readiness/allocation and acceptance contracts. It neither creates a second visual canon nor independently publishes a consumer's material. A confirmed October 12, 2026 interactive ImageGen → ChatGPT Files → Google Drive transfer is documented there; unattended scheduled transfer and consumer acceptance remain separately unverified.
