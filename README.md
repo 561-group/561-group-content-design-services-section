@@ -10,7 +10,7 @@ Start with [the design-bible specification](content/text/documents/articles/spec
 - [design procedures](content/text/documents/articles/specifications/procedures/) for the transformations and checks used while making an artifact;
 - [design policies](content/text/documents/articles/specifications/policies/) for the two explicit refusals;
 - [the glossary](content/text/glossary/terms/) for the vocabulary behind those rules; and
-- [the DTCG token file](data/records/design-tokens/561-group.tokens.json) when a tool needs the palette, fonts, or web-layout values.
+- [the DTCG token file](data/records/design-token-records/561-group.tokens.json) when a tool needs the palette, fonts, or web-layout values.
 
 The readable v0.3 edition is [the rendered design bible](content/text/documents/articles/specifications/561-group-design-bible-v0.3.html). Its active stylesheet is [the v0.3 CSS](code/styles/561-group-design-bible-v0.3.css). The design prompt is a specification too, at [561-group-visual-design-prompt.md](content/text/documents/articles/specifications/561-group-visual-design-prompt.md), rather than a disconnected science note.
 

@@ -34,7 +34,7 @@ Questions that have not yet become a procedure or policy are in
 
 ## Portable styling data
 
-[`561-group.tokens.json`](../../../../../data/records/design-tokens/561-group.tokens.json)
+[`561-group.tokens.json`](../../../../../data/records/design-token-records/561-group.tokens.json)
 is the machine-readable source for the shared palette, font stacks, spacing,
 and web-layout measurements. It follows the Design Tokens Community Group
 Format Module 2025.10. The format is a stable W3C Community Group report, not
