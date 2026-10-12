@@ -28,6 +28,42 @@ The service does not create competing models named after upstream science and so
 
 The existing media journal identifies an artifact by `(MediaNeed.id, artifact.purpose)`; therefore **purpose must be unique inside one need**, even across unlike capabilities. This invariant is enforced in the live Public Media source as of October 12, 2026. Use `wanted - live_reservations - public_use` (as computed by the actual journal) rather than acting on the originally requested quantity each hour. A missing/remote journal is *unknown*, not evidence that no other provider holds the work.
 
+## Procurement and provider role — RenDanHeYi / Hoare
+
+This micro-enterprise does **not own the media requirements queue**. Any 561
+Group, Lenticule Science, Red Cup Engineering, Coesite Operations or Causeway
+Public Services receiver can express its need through
+[the shared media requirement form](https://github.com/causeway-services/public-media-services-section/issues/new/choose)
+or a source-owned MediaNeed file checked by
+[reusable CI](https://github.com/causeway-services/public-media-services-section/blob/main/.github/workflows/validate-consumer-media-requirements.yml).
+The real consumer, not ChatGPT-Web, controls source truth, acceptance, rights,
+priority, and the decision to hire a provider.
+
+The service must publish an actual **provider-owned** offer via the shared
+ActivityPub/Capability Market provider surface when reachable, then make a
+bounded `MediaProviderBid` against one current admitted `MediaNeed` and
+artifact purpose. It is one bidder among Flow, deterministic capture,
+other image generators, human illustrators and coupled micro-enterprises.
+Offers carry expiry, precise deliverable, possible asset consideration and
+evidence; unavailable/unknown consideration is never reported as free.
+
+**Do not generate merely on seeing an open requirement.** The customer must
+make a separate, exact `MediaCustomerAward` and the existing shared MediaNeed
+allocator must retain a provider-bound held allocation. The governing Hoare
+preconditions are tested in
+[the Public Media provider-bid contract](https://github.com/causeway-services/public-media-services-section/blob/main/src/media-provider-bid-contract.mjs).
+The current integration is a serial-owner journal adapter, not a
+distributed sealed marketplace. In the absence of a real customer-authorized
+award and independently acknowledged hold, produce a competitive bid or
+remove a concrete admission obstacle — not uncommissioned image files.
+Do not fake an ActivityPub offer, authenticated witness, or provider receipt
+when scheduled tools are unavailable.
+
+An awarded image goes through the existing renderer/Drive process and a
+customer-owned independent assay before public use. Success to this enterprise
+is a **receiver-accepted output and accounted internal exchange**, not a
+picture count, a self-selected bid, or a Drive upload alone.
+
 ## One scheduled production shift
 
 1. Read the actual consumer frontier and corresponding authority/rights/effective demand. Check reuse, receiver readiness, named destination, held provider allocations and known source/visual constraints. Do not mint needs to use available image allowances. A hypothetical scene is not a production purchase order.
