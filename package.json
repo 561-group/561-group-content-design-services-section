@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "The Group-owned visual identity, DTCG tokens and theme using Engineering\u2019s shared theme engine.",
+  "description": "The Group-owned visual identity, DTCG tokens and theme using Engineering’s shared theme engine.",
   "exports": {
     "./theme": "./src/theme.mjs",
     "./tokens": "./data/records/design-token-records/561-group.tokens.json"
@@ -14,5 +14,9 @@
   ],
   "dependencies": {
     "@red-cup-engineering/web-theming-service": "workspace:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/561-group/561-group-content-design-services-section.git"
   }
 }
