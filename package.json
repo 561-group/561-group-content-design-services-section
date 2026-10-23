@@ -6,11 +6,12 @@
   "description": "The Group-owned visual identity, DTCG tokens and theme using Engineering’s shared theme engine.",
   "exports": {
     "./theme": "./src/theme.mjs",
-    "./tokens": "./data/records/design-token-records/561-group.tokens.json"
+    "./tokens": "./data/records/design-tokens/561-group.tokens.json",
+    "./brand-profile": "./src/brand-profile.mjs"
   },
   "files": [
     "src",
-    "data/records/design-token-records"
+    "data/records/design-tokens"
   ],
   "dependencies": {
     "@red-cup-engineering/web-theming-service": "workspace:*"
@@ -23,5 +24,10 @@
   "funding": {
     "type": "individual",
     "url": "https://github.com/561-group/.github/blob/main/TIPS.md"
+  },
+  "scripts": {
+    "check": "node --check src/theme.mjs && node --check src/brand-profile.mjs",
+    "test": "node --test test/*.test.mjs",
+    "verify": "npm run check && npm test"
   }
 }

@@ -1,5 +1,6 @@
 import { decodeTheme, escapeHtml, } from "@red-cup-engineering/web-theming-service/theming";
-import designTokens from "../data/records/design-token-records/561-group.tokens.json" with { type: "json" };
+import { derive561BrandProfile } from "./brand-profile.mjs";
+const brand = derive561BrandProfile();
 // The 561 Group visual identity as a thin spec on the shared web-theming system:
 // a handful of colour seeds + type tokens, from which web-theming derives the full
 // light AND dark palettes (OKLCH; WCAG-certified), plus the chrome unique to this
@@ -125,28 +126,27 @@ footer[role=contentinfo] {
   .folio-bar, .hero-desc, .colophon { color: #333; }
 }
 `;
-const cssFontStack = (token) => token.$value.map((font) =>
+const cssFontStack = (stack) => stack.map((font) =>
     /\s/.test(font) ? `"${font}"` : font,
 ).join(", ");
-const cssDimension = (token) => `${token.$value.value}${token.$value.unit}`;
-const hex = (token) => token.$value.hex;
+const cssDimension = (dimension) => `${dimension.value}${dimension.unit}`;
 
 /** The 561 identity as a web-theming spec — seeds in, light+dark palette out. */
 export const fiveSixOneSpec = {
     name: "five-six-one",
     seeds: {
-        ink: hex(designTokens.color.ink),
-        surface: hex(designTokens.color.bone),
-        accent: hex(designTokens.color.witness),
-        alarm: hex(designTokens.color.alarm),
+        ink: brand.colors.ink,
+        surface: brand.colors.bone,
+        accent: brand.colors.witness,
+        alarm: brand.colors.alarm,
     },
     type: {
-        sans: cssFontStack(designTokens.font.family.sans),
-        serif: cssFontStack(designTokens.font.family.slab),
-        mono: cssFontStack(designTokens.font.family.mono),
-        gutter: cssDimension(designTokens.layout.web.gutter),
-        max: cssDimension(designTokens.layout.web["semantic-site-max"]),
-        measure: cssDimension(designTokens.layout.web.measure),
+        sans: cssFontStack(brand.fonts.display),
+        serif: cssFontStack(brand.fonts.reading),
+        mono: cssFontStack(brand.fonts.evidence),
+        gutter: cssDimension(brand.layout.gutter),
+        max: cssDimension(brand.layout.semanticSiteMax),
+        measure: cssDimension(brand.layout.measure),
         radius: "0",
     },
     chrome: CHROME_CSS,

@@ -1,0 +1,36 @@
+name: 561 brand source conformance
+on:
+  pull_request:
+    paths:
+      - "src/**"
+      - "data/records/design-tokens/**"
+      - "test/**"
+      - "package.json"
+      - ".github/workflows/brand-conformance.yml"
+  push:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "data/records/design-tokens/**"
+      - "test/**"
+      - "package.json"
+      - ".github/workflows/brand-conformance.yml"
+permissions:
+  contents: read
+concurrency:
+  group: 561-brand-source-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  conformance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      # Profile tests import actual local DTCG JSON and need no registry secrets.
+      # Do not substitute mocks for the private integrated theme supplier.
+      - run: node --check src/brand-profile.mjs
+      - run: node --check src/theme.mjs
+      - run: node --test test/brand-profile.test.mjs

@@ -23,6 +23,43 @@ The readable v0.3 edition is [the rendered design bible](content/text/documents/
 
 The old FARS register layout, prior HTML editions, and their renderer are retained only as [package-local legacy material](lib/legacy/design-bible/). They are evidence of prior editions, not active documentation routes.
 
+## Executable source and conformance
+
+The single portable `data/records/design-tokens/561-group.tokens.json` is the
+owned v0.3 DTCG 2025.10 source. Consumers MUST import the **real** package
+exports `./tokens` or `./brand-profile` (not a similarly named orphan path).
+`src/theme.mjs` derives the existing Group theme from that same validated
+profile; Red Cup's shared theme engine still owns palette derivation and CSS
+components. There is no copied independent brand palette here.
+
+```js
+import { derive561BrandProfile, houseCssVariables } from "@561-group/561-group-content-design-services-section/brand-profile";
+const profile = derive561BrandProfile();
+const cssVariables = houseCssVariables(profile);
+```
+
+The profile validates DTCG types, explicit sRGB components against hex fallback,
+font stacks, layout units, source edition and the critical reading-contrast
+pairs. The CSS output deterministically emits the actual Group token values.
+It neither renders an image nor certifies that a webpage actually *uses* the
+variables, stays within the 6%/3% alarm/witness area limits, retains the giant
+561 mark, or remains accessible at mobile widths. Those are separately received
+rendering and visual-proof jobs.
+
+Run `npm run verify` in the **actual installed dependency closure**. The
+dependency-free profile tests can run with `node --test test/brand-profile.test.mjs`
+before the theme supplier is mounted. Failing typed tokens must prevent
+publication; a passing source test never substitutes for a screenshot and an
+independent reader's comparison of what appeared.
+
+**Original 561.group receiving defect (October 2026):** its previous homepage
+kept a valid renderer and publication workflow while silently drifting from
+the house visual language and inserting unwanted identity-first copy. The
+standing remedy is to compare a changed producer's rendered page with the
+current accepted 561 house specimen, desktop and mobile, not to reopen the
+earlier dense content. Design source, TUFTE projection, browser observation,
+reused customer asset and actual receiving are distinct obligations.
+
 ## Internal service contract
 
 An owned design corpus is not by itself a delivered internal service. A design-service receipt should identify the customer, artifact or surface, requested transformation or assessment, applicable design edition, accountable provider, and customer acceptance evidence.
