@@ -15,6 +15,7 @@ Start with [the design-bible specification](content/text/documents/articles/spec
 
 - [design elements](content/text/documents/articles/specifications/elements/) for marks, palette entries, grids, type, imagery, and document furniture;
 - [design procedures](content/text/documents/articles/specifications/procedures/) for the transformations and checks used while making an artifact;
+- [derive and receive a branded artifact](content/text/documents/articles/specifications/procedures/derive-and-receive-brand-artifact.md) for the *candidate* research → original producer → rendered specimen → independent acceptance cycle, grounded in the 561.group regression;
 - [design policies](content/text/documents/articles/specifications/policies/) for the two explicit refusals;
 - [the glossary](content/text/glossary/terms/) for the vocabulary behind those rules; and
 - [the DTCG token file](data/records/design-tokens/561-group.tokens.json) when a tool needs the palette, fonts, or web-layout values.
