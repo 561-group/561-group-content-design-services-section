@@ -127,7 +127,7 @@ footer[role=contentinfo] {
 }
 `;
 const cssFontStack = (stack) => stack.map((font) =>
-    /\\s/.test(font) ? `"${font}"` : font,
+    /\s/.test(font) ? `"${font}"` : font,
 ).join(", ");
 const cssDimension = (dimension) => `${dimension.value}${dimension.unit}`;
 
