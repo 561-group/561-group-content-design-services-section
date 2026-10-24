@@ -47,8 +47,8 @@ variables, stays within the 6%/3% alarm/witness area limits, retains the giant
 561 mark, or remains accessible at mobile widths. Those are separately received
 rendering and visual-proof jobs.
 
-Run `npm run verify` in the **actual installed dependency closure**. The
-dependency-free profile tests can run with `node --test test/brand-profile.test.mjs`
+Run `npm run verify` in `red-cup-engineering/561-group-content-design-services-section` (the engine holding this section's code; set `CONTENT_DESIGN_ROOT` to this checkout) in the **actual installed dependency closure**. The
+dependency-free profile tests can run there with `node --test test/brand-profile.test.mjs`
 before the theme supplier is mounted. Failing typed tokens must prevent
 publication; a passing source test never substitutes for a screenshot and an
 independent reader's comparison of what appeared.
