@@ -108,8 +108,10 @@ distinction is proved simply because it has a striking poster.
 For the Group use [Color-budget application](color-budget-application.md):
 alarm-red bounding-box coverage at most 6%, witness-blue at most 3%.
 Text color contrast and link discernibility are separate requirements.
-Do **not** print red text on bone at body size merely because the mark uses
-red; the Design Bible identifies that contrast failure.
+Do **not** use alarm-red for ordinary page marks, headings or CTAs:
+the primary 561 mark is ink on bone and [alarm-red](../elements/alarm-red.md)
+marks actual hazards, refusals or urgency. A passing test demanding a giant
+red numeral is evidence that the *test itself* contradicts the Design Bible.
 
 ## Practice gesture — independent receiving, then improve the producer
 
@@ -131,6 +133,232 @@ red; the Design Bible identifies that contrast failure.
     exposes a flaw in this procedure, edit the original source and **use the
     repaired method on the next authorized Work**, measuring whether rework
     or the recipient's rejection actually decreases.
+
+## Aesthetic and affective meet-then-beat — comparative public receiving (2026-10-23)
+
+**Demand and owner.** This is a specialization of the **same** commissioning,
+fabrication and independent-receiving procedure for the Group's original
+[corporate public-legibility Work #259](https://github.com/561-group/561-group-services-section/issues/259)
+and [561.group receiving Work #17](https://github.com/561-group/561.group/issues/17),
+not an independent marketing roadmap, universal affect score or new brand law.
+Science owns hypotheses and research validity; this Group source owns visual
+decisions; Red Cup owns reusable production/instruments; Coesite coordinates
+work and comparison; Causeway/public audience and competent editors receive
+actual expressive work. A tested component is not an emotionally received work.
+
+**Select *different* public comparators for different jobs.** The
+[WARC Creative 100 (2026)](https://www.warc.com/en/data-benchmarks/rankings-creative-100-overview)
+ranks awarded creativity (Heineken, Apple, McDonald's lead its brands).
+[Cannes Lions 2026](https://www.canneslions.com/news/final-winners-announced-for-2026)
+names Heineken, KitKat and IKEA as Creative Brands of the Year, and Apple as
+an in-house agency leader. The
+[WARC Effective 100 (2026)](https://www.warc.com/en/data-benchmarks/rankings-effective-100-overview)
+separately ranks awarded effectiveness (McDonald's, Dove, IKEA lead brands);
+the [Effie Index released June 2026](https://www.effieindex.com/ranking/?rt=6)
+ranks Unilever, McDonald's and AB InBev as marketers.
+[Kantar BrandZ 2026](https://www.kantar.com/campaigns/brandz/global) is a
+brand-*value* ranking, not an aesthetic or affective acceptance test. Awarded,
+effective, valuable and beloved are **four nonidentical claims**; none measures
+this Group's own audience. Examples are *candidate craft comparators*, not
+style templates or rights to copy their trade dress.
+
+For each actual receiver/job, predeclare one same-job reference and an
+original alternative: first-five-second corporate recognition; a technical
+reader finding a real source and distinguishing proof from proposal; a buyer
+finding the responsible service and contact; a viewer comprehending an original
+character's motive and consequence; or a voluntary supporter understanding
+what their support preserves. Compare **matched mediums and exposures**:
+one screen against one screen, one complete film against one complete film,
+one interaction against one interaction. Record the peer's original campaign
+and dated version and the Group's source revision, channel, viewport, timing,
+language, accessibility mode, and legal permission to use a specimen.
+A large brand's distribution, paid impressions and budget are not quality
+scores; inaccessible or unlicensed peer material is a refused comparison.
+
+**Use the source-owned research without converting it into invented evidence.**
+[Science's affect term](https://github.com/lenticule-science/561-theory/blob/main/science/theories/medicine/theories/psychology/terms/affect.md)
+distinguishes bodily affect (including valence/arousal) from a person's named
+emotion; self-report is a situated report, **not** a direct measure of an
+unobserved nervous system.
+The [state-aesthetic-continuum inquiry](https://github.com/lenticule-science/561-theory/blob/main/humanities/theories/sociology/theories/cybernetic-postliberalism/prose/teaching/explanations/the-state-aesthetic-continuum.md)
+and [affect-governance analysis](https://github.com/lenticule-science/561-theory/blob/main/humanities/theories/sociology/theories/predicated-sociology/concepts/affect-governance.md)
+warn against treating emotional capture as ethical success. In original
+[Media Science #11](https://github.com/lenticule-science/media-services-section/issues/11),
+apparent motive attributed to moving forms can diverge from source events;
+rhythm and recognizable figures are *testable design hypotheses*, not verified
+561 Group audience effects.
+
+**Transfer causal creative practices, never borrowed visual signatures.**
+These 2026-awarded examples give **specific, falsifiable production hypotheses**,
+not evidence that their performance will transfer to this institution.
+
+- [AXA *Three Words*](https://www.warc.com/en/campaigns/b94de73e3d4a4230811f1f12dcc2706b)
+  changed the underlying insurance contract and emergency-relocation service.
+  Hypothesis: an authenticated *institutional act and beneficiary consequence*
+  is more persuasive than a picture promising help. Our film/page must follow
+  a verifiable Work event, not invent an accomplished rescue or successful
+  independent institution.
+- [Spotify *Spreadbeats*](https://clios.com/winners-gallery/details/173291)
+  performed a music video **inside the spreadsheet medium** used by advertising
+  planners. Hypothesis: our actual inspectable mathematics, computing interfaces
+  and source-linked research can be performed with medium-native surprise,
+  rather than represented by stock glowing-brain or gradient images. Preserve
+  an accessible alternative and the original proof/proposal boundary.
+- [Heineken *For the Love of Pubs*](https://www.heineken.com/ie/en/campaigns/fortheloveofpubs)
+  made a real community's effort to preserve a pub the subject of a story.
+  Hypothesis: character, place, material repair and visible consequences carry
+  affect better than claims of scale. When portraying our real communities or
+  Indigenous practices, their own voices, dignity and rights have authority;
+  not every lived relation is an exploitable story.
+- [Dove *Real Beauty*](https://www.warc.com/en/data-benchmarks/rankings-effective-100-overview)
+  demonstrates a long-running recognizable narrative platform rather than a
+  new decorative brand each week. Hypothesis: **consistent but evolving**
+  561 Group visual grammar and original characters across sites, publication,
+  research, drama, service and small repeated interactions can accumulate
+  recognition. The five Group voices remain distinct and Source/Public Media
+  rights govern each act.
+
+Our *candidate* expressive test is a **witnessed-consequence scene**:
+an immediately legible object/person/character and situation; an unexpected
+yet authentic rule, relation, action or refusal; a perceptible consequence;
+and a source-linked opportunity for a viewer to learn or act. Visual craft
+may use the authorized giant numeral, hard grid, restrained color and type,
+source-owned mythopoetry, sequencing, sound, timing, negative space or genuine
+participation appropriate to the **actual** medium and rights. Compare that
+scene with a source-accurate conventional explanation of the **same** event:
+does it improve unaided recognition, justified feeling, correct understanding
+and voluntary next action without increasing false claims? An unmade scene
+has no performance result. Animated characters and live works are commissioned
+and edited by their original Public Media owners; a website test cannot certify
+a film or an embodied Actor.
+
+**Preregister an independently usable audience comparison for this job:**
+
+1. Before showing production tickets or explaining the institution, observe
+   unaided first-impression words and unprompted distinctive-mark recognition
+   after a bounded exposure (record exposure seconds). Later ask for unaided
+   recall of the actual work and its source, recording delay. Do not score
+   participants by whether they agree with the Group's metaphysics.
+2. Ask voluntary readers separately for perceived valence and arousal on
+   anchored scales, free-word feeling description, interest/curiosity, perceived
+   trustworthiness, and sense of agency. Distinguish stated feeling,
+   interpretation and physiological claim. Record negative, mixed and
+   ambivalent responses without recoding dissent as failure.
+3. Observe the *real* task: destination reached, correct source/offer found,
+   factual recall, action attempted, time, navigation/assistive-technology
+   friction and voluntary follow-through where lawfully visible. Correct
+   information and freely chosen refusal can both be good outcomes.
+4. Have a separate qualified art/editorial recipient judge craft, visual
+   hierarchy, scene coherence and originality against the adopted Group
+   Design Bible and same-format peers; explain disagreement. Test accessibility,
+   rights, culturally competent source authority and rejected identity-led
+   persuasion as **independent hard constraints**, not weighted sentiment.
+5. Name participant recruitment, consent, language/ability strata, sample
+   denominators, display/order randomization or its absence, response
+   noncoverage, data minimization and uncertainty **before** inspecting
+   results. For a small pilot report observations as a pilot; do not present
+   p-values or a universal “emotion” or “beat” score. Do not capture covert
+   behavioral or biometric data.
+
+The original [561.group Chromium visual witness](https://github.com/561-group/561.group/blob/main/scripts/assay-rendered-brand.mjs)
+already produces exact source, viewport, screenshot hash and computed-style
+observations. Extend **its existing REVIEW packet/CI artifact**, not a second
+site or dashboard, to present real specimens and a consent-based offline
+audience-reading worksheet. Actual respondent answers and source-qualified
+peer observations must enter existing Work/receiving through the competent
+office; a prepared worksheet, browser pixel mask, green build, view count or
+favorable model judgment **never** certifies felt effects or independent
+acceptance. Do not reuse an image in another venue merely because it appears
+in an award gallery.
+
+**Comparative decision and recurrence.** Record each measure, denominator,
+counterexample and judgment separately; name exactly which peer/job reached
+parity and which exceeded it, with uncertainty and an independently observed
+beneficiary. A creative work can earn an aesthetic success without a sale;
+a useful page can earn practical success without admiration. If no human
+responses exist, the correct result is **not yet evaluated**. On rejected
+artifacts improve the *actual source maker* (narrative, composition, typography,
+pacing, figure, interaction or original producer), fabricate and test another
+edition, then send it back to an independent audience. Neither broad
+brand-value comparisons nor exposure-maximizing manipulation can close this
+Work by proxy.
+
+## Homepage page-kind refusal and source restoration — actual Leader rejection (2026-10-23)
+
+**Governing correction.** The Leader explicitly rejected the source-conformant,
+browser-tested [561.group art-first PR #49](https://github.com/561-group/561.group/pull/49):
+a succession of agents turned whatever the Leader mentioned in research,
+company culture, mythopoetry or long-range plans into yet another public
+homepage headline. Even *true* descriptions of the Group's beliefs can be
+wrong material for the page and its intended reader. Giant escalating type,
+an alarm-red 561 mark, black/red hero mass and repeated decorative appeals
+have made the homepage incoherent. A source test enforcing that appearance
+is a **mis-specified source-to-consumer contract**, not evidence of fidelity.
+PR #49 and the earlier subject-insertion [#31](https://github.com/561-group/561.group/pull/31)
+were closed without merge under this correction; original research,
+creative and production evidence remains available in its proper owner.
+
+**The page's receiving job precedes its subject matter.** Read the original
+customer journey, current source-owned nav, publisher and actual available
+offers. On the 561 Group apex homepage, a stranger must be able to identify
+the Group's four responsibilities, select Work/Projects/Research/Buying
+destinations, read representative real project links, and find the existing
+contact/terms without learning any metaphysics. *Culture, mythopoetry,
+research fronts, philosophy, experimental biology and incidental technical
+repairs* enter their own About, original research, project, fiction or case
+study surfaces. The **existence** of a compelling new story or technical
+success is **not** authority to add a homepage tile, regardless of how well
+a browser renders it. Preserve the original identity of those works;
+do not erase the content or graft it onto another random homepage section.
+
+**Qualify substance instead of identity signals.** Indigenous responsibility
+is not a promotional modifier or a self-awarded certification. Where data
+scope actually implicates Indigenous peoples or communities, inspect
+[the CARE Principles for Indigenous Data Governance](https://www.rd-alliance.org/wp-content/uploads/2024/03/CARE20Principles20for20Indigenous20Data20Governance_OnePagers_FINAL20Sept2006202019.pdf):
+Collective Benefit, Authority to Control, Responsibility and Ethics.
+Ask who owns the decision to collect, process, share or withdraw the data;
+who benefits; who approves downstream uses; and what refuses an unpermitted
+publication. Naming the principles, or passing a text assertion, **does
+not establish rights-holder consent or operational conformance**.
+In original corporate governance, study **energy, resources and
+coordination** as structuring material constraints and Work relations,
+not as another sacred-sounding masthead slogan. Distinguish the source's
+research hypotheses, existing practices and proposed institutional designs.
+
+**Repair the real visual source.** The original Design Bible
+[561 primary mark](../elements/five-six-one-mark.md) specifies **ink on
+bone** as default; alarm-red is reserved for the stamp variant.
+Its [alarm-red specification](../elements/alarm-red.md) explicitly refuses
+ordinary headers, emphasis and decoration; a source-enforced giant
+alarm-red mark was a regression *against* the actual brand Bible. Choose
+compact readable type and appropriate white space; **increasing font size
+is not visual hierarchy**. Treat first-viewport navigability, contrast,
+keyboard focus, reduced-motion, mobile line/word breaks, content ownership
+and the page's core task as separately tested properties. Color-budget
+compliance is necessary where color is used, but is not enough to prove
+artistic or reader success.
+
+**This case's source implementation and falsifiers.** The original
+[561.group draft #50](https://github.com/561-group/561.group/pull/50)
+changes `data/frontdoor.json`, `data/home.json`, the incumbent TUFTE
+renderer and house styling. It removes the unwanted full-home speculative,
+shopping, agent-API and support/marketing-billboard panels **without
+deleting their actual pages or source references**. Its source and Chromium
+assays must refuse a reintroduced cultural-topic hero, out-of-place
+headline, decorative alarm-red CTA/mark, no-CARE but Indigenous-labeled
+data service, lost existing paid inquiry, missing research or company
+navigation, or an invented customer/public outcome. Compare against the
+last legitimate `main` version; screenshots, tests and technical
+candidate approval are **not** final aesthetic acceptance by the Leader
+or real audience. Keep source review and independent recipient separate.
+
+**Practical reusable decision:** a new Leader utterance enters the Group's
+original Research/Requirement/Work system for interpretation and routing.
+Homepage promotion requires an explicit *homepage receiving job* supported
+by correct current evidence and owner, not mere topic mention, emotional
+appeal, cultural importance or a creative producer's enthusiasm. A page
+that helps users reach rich project material can be more coherent than
+one trying to perform every project simultaneously.
 
 ## Observed first case: the 561.group homepage, 2026-10-22/23
 
