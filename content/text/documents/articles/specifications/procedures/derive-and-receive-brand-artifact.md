@@ -351,10 +351,17 @@ a victory claim derived from a passing source/test graph.
 **Observed results, not model approval:** the combined
 [GitHub Actions run #40062442947](https://github.com/561-group/561.group/actions/runs/40062442947)
 already qualified the source-consolidated candidate and four real
-Chromium snapshots. The revised source placing action first is under a
-subsequent run and requires its own readback before asserting conformance.
-No independent viewer, artistic editor or peer superiority is certified by
-either run.
+Chromium snapshots. The revised source placing action first passed its subsequent
+[native and actual-Chromium run #40062675966](https://github.com/561-group/561.group/actions/runs/40062675966)
+on draft head `d955c56a199a44db017532bea535afc45c6c85b2`.
+The exact `witness.json` states all four original routes passed and
+records homepage `proofTop=1901.14`, `cardsTop=2651.91` at 1440px,
+and `proofTop=1535.38`, `cardsTop=2327.28` at 390px. The browser
+also retained the actual Causeway service URL and both original publisher
+source links. Its original screenshot hashes and the local-only consent
+worksheet remain inside the original GitHub Actions artifact.
+No independent viewer, artistic editor, accessible-user recipient or
+peer superiority is certified by either run.
 
 ## Observed first case: the 561.group homepage, 2026-10-22/23
 
