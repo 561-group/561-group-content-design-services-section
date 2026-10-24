@@ -108,8 +108,10 @@ distinction is proved simply because it has a striking poster.
 For the Group use [Color-budget application](color-budget-application.md):
 alarm-red bounding-box coverage at most 6%, witness-blue at most 3%.
 Text color contrast and link discernibility are separate requirements.
-Do **not** print red text on bone at body size merely because the mark uses
-red; the Design Bible identifies that contrast failure.
+Do **not** use alarm-red for ordinary page marks, headings or CTAs:
+the primary 561 mark is ink on bone and [alarm-red](../elements/alarm-red.md)
+marks actual hazards, refusals or urgency. A passing test demanding a giant
+red numeral is evidence that the *test itself* contradicts the Design Bible.
 
 ## Practice gesture — independent receiving, then improve the producer
 
@@ -281,87 +283,82 @@ edition, then send it back to an independent audience. Neither broad
 brand-value comparisons nor exposure-maximizing manipulation can close this
 Work by proxy.
 
-## Source-to-public-action receiving: witnessed-consequence first (2026-10-23)
+## Homepage page-kind refusal and source restoration — actual Leader rejection (2026-10-23)
 
-An observed second test case now qualifies an important **medium-native choice**
-inside the same original Group creative production job. The
-[561.group consolidated source PR #49](https://github.com/561-group/561.group/pull/49)
-retains the current public work/contact/payment-inquiry paths and restores
-the four-house original field score alongside one specific *original service
-event*: the original Causeway Green Web pilot page once returned HTTP 404,
-then the original publisher's
-[source and release repair](https://github.com/causeway-services/public-web-services-section/pull/27)
-was independently observed at HTTP 200. The web medium can **show the real
-404→200 consequence and offer the actual original
-[free worksheet](https://services.561.group/green-web-service-pilot/)**,
-rather than simply advertise a brand's ability to fix websites. This
-transfers AXA's *work changes the underlying service* and Spotify's *medium
-performs the point* mechanisms without copying either company's imagery
-or claiming equal creative reception.
+**Governing correction.** The Leader explicitly rejected the source-conformant,
+browser-tested [561.group art-first PR #49](https://github.com/561-group/561.group/pull/49):
+a succession of agents turned whatever the Leader mentioned in research,
+company culture, mythopoetry or long-range plans into yet another public
+homepage headline. Even *true* descriptions of the Group's beliefs can be
+wrong material for the page and its intended reader. Giant escalating type,
+an alarm-red 561 mark, black/red hero mass and repeated decorative appeals
+have made the homepage incoherent. A source test enforcing that appearance
+is a **mis-specified source-to-consumer contract**, not evidence of fidelity.
+PR #49 and the earlier subject-insertion [#31](https://github.com/561-group/561.group/pull/31)
+were closed without merge under this correction; original research,
+creative and production evidence remains available in its proper owner.
 
-**Actual adverse receiving and source repair.** The original four-house
-visual score was technically correct, but a real 390px full-page screenshot
-showed the illustrative four-card narrative appearing *before* the documented
-service event and usable visitor action. This placed the most concrete
-answer late in the scrolling task, despite source tests and pixels passing.
-Within the **same original** TUFTE renderer and Design Bible the composer
-moved the documentarily witnessed consequence *ahead* of the explanatory
-four-company graphic score. The existing Chromium runner now observes
-`proofTop < cardsTop` as rendered DOM geometry at 390px and 1440px,
-and rejects a future regression or a counterfeited off-domain action; the
-existing source/HTML/JSON tests preserve the Group's recent real paid
-service opportunities and qualified customer inquiry routes. This is a
-specific practical layout/accessibility failure and corrected producer
-selection, not a universal claim that one story order improves feelings.
+**The page's receiving job precedes its subject matter.** Read the original
+customer journey, current source-owned nav, publisher and actual available
+offers. On the 561 Group apex homepage, a stranger must be able to identify
+the Group's four responsibilities, select Work/Projects/Research/Buying
+destinations, read representative real project links, and find the existing
+contact/terms without learning any metaphysics. *Culture, mythopoetry,
+research fronts, philosophy, experimental biology and incidental technical
+repairs* enter their own About, original research, project, fiction or case
+study surfaces. The **existence** of a compelling new story or technical
+success is **not** authority to add a homepage tile, regardless of how well
+a browser renders it. Preserve the original identity of those works;
+do not erase the content or graft it onto another random homepage section.
 
-**Qualify the full Work at each boundary:**
+**Qualify substance instead of identity signals.** Indigenous responsibility
+is not a promotional modifier or a self-awarded certification. Where data
+scope actually implicates Indigenous peoples or communities, inspect
+[the CARE Principles for Indigenous Data Governance](https://www.rd-alliance.org/wp-content/uploads/2024/03/CARE20Principles20for20Indigenous20Data20Governance_OnePagers_FINAL20Sept2006202019.pdf):
+Collective Benefit, Authority to Control, Responsibility and Ethics.
+Ask who owns the decision to collect, process, share or withdraw the data;
+who benefits; who approves downstream uses; and what refuses an unpermitted
+publication. Naming the principles, or passing a text assertion, **does
+not establish rights-holder consent or operational conformance**.
+In original corporate governance, study **energy, resources and
+coordination** as structuring material constraints and Work relations,
+not as another sacred-sounding masthead slogan. Distinguish the source's
+research hypotheses, existing practices and proposed institutional designs.
 
-- Source-qualified original Group identity and actual Causeway publisher
-  receipt: candidate documentary truth, not a live HTTP-uptime guarantee,
-  external client satisfaction, ecological efficacy or independent service
-  adoption. The effect has a dated source and human-inspectable original
-  working destination.
-- Installed TUFTE/Worker/Chromium result and local consent-first worksheet:
-  syntax/native/browser *technical receiving only*. The browser assays
-  one action's position, URL, 404→200 depiction, receipt links, source
-  qualifications and four original visual cards, not actual traffic,
-  accessibility across assistive technologies, intention or pleasantness.
-- Independent art and actual site reader receiving: still unperformed.
-  Different legitimate readers may prefer an abstract institutional story
-  before a practical service, or decline the whole sequence. Compare the
-  unchanged audience task, source-accurate plain alternative and actual
-  expressive alternative under the same device/conditions, with readers'
-  free choice and task success separate from stated valence/arousal.
-- Economic receiving: a buyer's service use, sent quote, agreed scope,
-  customer-accepted result and settled cash are separate native conditions;
-  the source-of-truth public price and terms remain with Causeway, not a
-  pretend checkout added to the Group's aesthetic experiment.
+**Repair the real visual source.** The original Design Bible
+[561 primary mark](../elements/five-six-one-mark.md) specifies **ink on
+bone** as default; alarm-red is reserved for the stamp variant.
+Its [alarm-red specification](../elements/alarm-red.md) explicitly refuses
+ordinary headers, emphasis and decoration; a source-enforced giant
+alarm-red mark was a regression *against* the actual brand Bible. Choose
+compact readable type and appropriate white space; **increasing font size
+is not visual hierarchy**. Treat first-viewport navigability, contrast,
+keyboard focus, reduced-motion, mobile line/word breaks, content ownership
+and the page's core task as separately tested properties. Color-budget
+compliance is necessary where color is used, but is not enough to prove
+artistic or reader success.
 
-**Reusable procedural decision, limited to this same job:** where the
-visitor is there to *find/understand/verify/use* a real service, present its
-best source-qualified practical consequence and the reversible, optional
-next action **before** an explanatory visual allegory, unless actual
-independent reader evidence supports a different order. In creative media
-whose audience job is fiction rather than service choice, this order is
-*not* mandatory; return to scene/character consequence and independent
-dramaturgical receiving. Refuse fake service receipts, fabricated emotion,
-invented provider authority, a privacy-intrusive engagement score or
-a victory claim derived from a passing source/test graph.
+**This case's source implementation and falsifiers.** The original
+[561.group draft #50](https://github.com/561-group/561.group/pull/50)
+changes `data/frontdoor.json`, `data/home.json`, the incumbent TUFTE
+renderer and house styling. It removes the unwanted full-home speculative,
+shopping, agent-API and support/marketing-billboard panels **without
+deleting their actual pages or source references**. Its source and Chromium
+assays must refuse a reintroduced cultural-topic hero, out-of-place
+headline, decorative alarm-red CTA/mark, no-CARE but Indigenous-labeled
+data service, lost existing paid inquiry, missing research or company
+navigation, or an invented customer/public outcome. Compare against the
+last legitimate `main` version; screenshots, tests and technical
+candidate approval are **not** final aesthetic acceptance by the Leader
+or real audience. Keep source review and independent recipient separate.
 
-**Observed results, not model approval:** the combined
-[GitHub Actions run #40062442947](https://github.com/561-group/561.group/actions/runs/40062442947)
-already qualified the source-consolidated candidate and four real
-Chromium snapshots. The revised source placing action first passed its subsequent
-[native and actual-Chromium run #40062675966](https://github.com/561-group/561.group/actions/runs/40062675966)
-on draft head `d955c56a199a44db017532bea535afc45c6c85b2`.
-The exact `witness.json` states all four original routes passed and
-records homepage `proofTop=1901.14`, `cardsTop=2651.91` at 1440px,
-and `proofTop=1535.38`, `cardsTop=2327.28` at 390px. The browser
-also retained the actual Causeway service URL and both original publisher
-source links. Its original screenshot hashes and the local-only consent
-worksheet remain inside the original GitHub Actions artifact.
-No independent viewer, artistic editor, accessible-user recipient or
-peer superiority is certified by either run.
+**Practical reusable decision:** a new Leader utterance enters the Group's
+original Research/Requirement/Work system for interpretation and routing.
+Homepage promotion requires an explicit *homepage receiving job* supported
+by correct current evidence and owner, not mere topic mention, emotional
+appeal, cultural importance or a creative producer's enthusiasm. A page
+that helps users reach rich project material can be more coherent than
+one trying to perform every project simultaneously.
 
 ## Observed first case: the 561.group homepage, 2026-10-22/23
 
