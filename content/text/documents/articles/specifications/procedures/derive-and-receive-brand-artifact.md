@@ -186,6 +186,50 @@ apparent motive attributed to moving forms can diverge from source events;
 rhythm and recognizable figures are *testable design hypotheses*, not verified
 561 Group audience effects.
 
+**Transfer causal creative practices, never borrowed visual signatures.**
+These 2026-awarded examples give **specific, falsifiable production hypotheses**,
+not evidence that their performance will transfer to this institution.
+
+- [AXA *Three Words*](https://www.warc.com/en/campaigns/b94de73e3d4a4230811f1f12dcc2706b)
+  changed the underlying insurance contract and emergency-relocation service.
+  Hypothesis: an authenticated *institutional act and beneficiary consequence*
+  is more persuasive than a picture promising help. Our film/page must follow
+  a verifiable Work event, not invent an accomplished rescue or successful
+  independent institution.
+- [Spotify *Spreadbeats*](https://clios.com/winners-gallery/details/173291)
+  performed a music video **inside the spreadsheet medium** used by advertising
+  planners. Hypothesis: our actual inspectable mathematics, computing interfaces
+  and source-linked research can be performed with medium-native surprise,
+  rather than represented by stock glowing-brain or gradient images. Preserve
+  an accessible alternative and the original proof/proposal boundary.
+- [Heineken *For the Love of Pubs*](https://www.heineken.com/ie/en/campaigns/fortheloveofpubs)
+  made a real community's effort to preserve a pub the subject of a story.
+  Hypothesis: character, place, material repair and visible consequences carry
+  affect better than claims of scale. When portraying our real communities or
+  Indigenous practices, their own voices, dignity and rights have authority;
+  not every lived relation is an exploitable story.
+- [Dove *Real Beauty*](https://www.warc.com/en/data-benchmarks/rankings-effective-100-overview)
+  demonstrates a long-running recognizable narrative platform rather than a
+  new decorative brand each week. Hypothesis: **consistent but evolving**
+  561 Group visual grammar and original characters across sites, publication,
+  research, drama, service and small repeated interactions can accumulate
+  recognition. The five Group voices remain distinct and Source/Public Media
+  rights govern each act.
+
+Our *candidate* expressive test is a **witnessed-consequence scene**:
+an immediately legible object/person/character and situation; an unexpected
+yet authentic rule, relation, action or refusal; a perceptible consequence;
+and a source-linked opportunity for a viewer to learn or act. Visual craft
+may use the authorized giant numeral, hard grid, restrained color and type,
+source-owned mythopoetry, sequencing, sound, timing, negative space or genuine
+participation appropriate to the **actual** medium and rights. Compare that
+scene with a source-accurate conventional explanation of the **same** event:
+does it improve unaided recognition, justified feeling, correct understanding
+and voluntary next action without increasing false claims? An unmade scene
+has no performance result. Animated characters and live works are commissioned
+and edited by their original Public Media owners; a website test cannot certify
+a film or an embodied Actor.
+
 **Preregister an independently usable audience comparison for this job:**
 
 1. Before showing production tickets or explaining the institution, observe
