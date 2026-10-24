@@ -132,6 +132,111 @@ red; the Design Bible identifies that contrast failure.
     repaired method on the next authorized Work**, measuring whether rework
     or the recipient's rejection actually decreases.
 
+## Aesthetic and affective meet-then-beat — comparative public receiving (2026-10-23)
+
+**Demand and owner.** This is a specialization of the **same** commissioning,
+fabrication and independent-receiving procedure for the Group's original
+[corporate public-legibility Work #259](https://github.com/561-group/561-group-services-section/issues/259)
+and [561.group receiving Work #17](https://github.com/561-group/561.group/issues/17),
+not an independent marketing roadmap, universal affect score or new brand law.
+Science owns hypotheses and research validity; this Group source owns visual
+decisions; Red Cup owns reusable production/instruments; Coesite coordinates
+work and comparison; Causeway/public audience and competent editors receive
+actual expressive work. A tested component is not an emotionally received work.
+
+**Select *different* public comparators for different jobs.** The
+[WARC Creative 100 (2026)](https://www.warc.com/en/data-benchmarks/rankings-creative-100-overview)
+ranks awarded creativity (Heineken, Apple, McDonald's lead its brands).
+[Cannes Lions 2026](https://www.canneslions.com/news/final-winners-announced-for-2026)
+names Heineken, KitKat and IKEA as Creative Brands of the Year, and Apple as
+an in-house agency leader. The
+[WARC Effective 100 (2026)](https://www.warc.com/en/data-benchmarks/rankings-effective-100-overview)
+separately ranks awarded effectiveness (McDonald's, Dove, IKEA lead brands);
+the [Effie Index released June 2026](https://www.effieindex.com/ranking/?rt=6)
+ranks Unilever, McDonald's and AB InBev as marketers.
+[Kantar BrandZ 2026](https://www.kantar.com/campaigns/brandz/global) is a
+brand-*value* ranking, not an aesthetic or affective acceptance test. Awarded,
+effective, valuable and beloved are **four nonidentical claims**; none measures
+this Group's own audience. Examples are *candidate craft comparators*, not
+style templates or rights to copy their trade dress.
+
+For each actual receiver/job, predeclare one same-job reference and an
+original alternative: first-five-second corporate recognition; a technical
+reader finding a real source and distinguishing proof from proposal; a buyer
+finding the responsible service and contact; a viewer comprehending an original
+character's motive and consequence; or a voluntary supporter understanding
+what their support preserves. Compare **matched mediums and exposures**:
+one screen against one screen, one complete film against one complete film,
+one interaction against one interaction. Record the peer's original campaign
+and dated version and the Group's source revision, channel, viewport, timing,
+language, accessibility mode, and legal permission to use a specimen.
+A large brand's distribution, paid impressions and budget are not quality
+scores; inaccessible or unlicensed peer material is a refused comparison.
+
+**Use the source-owned research without converting it into invented evidence.**
+[Science's affect term](https://github.com/lenticule-science/561-theory/blob/main/science/theories/medicine/theories/psychology/terms/affect.md)
+distinguishes bodily affect (including valence/arousal) from a person's named
+emotion; self-report is a situated report, **not** a direct measure of an
+unobserved nervous system.
+The [state-aesthetic-continuum inquiry](https://github.com/lenticule-science/561-theory/blob/main/humanities/theories/sociology/theories/cybernetic-postliberalism/prose/teaching/explanations/the-state-aesthetic-continuum.md)
+and [affect-governance analysis](https://github.com/lenticule-science/561-theory/blob/main/humanities/theories/sociology/theories/predicated-sociology/concepts/affect-governance.md)
+warn against treating emotional capture as ethical success. In original
+[Media Science #11](https://github.com/lenticule-science/media-services-section/issues/11),
+apparent motive attributed to moving forms can diverge from source events;
+rhythm and recognizable figures are *testable design hypotheses*, not verified
+561 Group audience effects.
+
+**Preregister an independently usable audience comparison for this job:**
+
+1. Before showing production tickets or explaining the institution, observe
+   unaided first-impression words and unprompted distinctive-mark recognition
+   after a bounded exposure (record exposure seconds). Later ask for unaided
+   recall of the actual work and its source, recording delay. Do not score
+   participants by whether they agree with the Group's metaphysics.
+2. Ask voluntary readers separately for perceived valence and arousal on
+   anchored scales, free-word feeling description, interest/curiosity, perceived
+   trustworthiness, and sense of agency. Distinguish stated feeling,
+   interpretation and physiological claim. Record negative, mixed and
+   ambivalent responses without recoding dissent as failure.
+3. Observe the *real* task: destination reached, correct source/offer found,
+   factual recall, action attempted, time, navigation/assistive-technology
+   friction and voluntary follow-through where lawfully visible. Correct
+   information and freely chosen refusal can both be good outcomes.
+4. Have a separate qualified art/editorial recipient judge craft, visual
+   hierarchy, scene coherence and originality against the adopted Group
+   Design Bible and same-format peers; explain disagreement. Test accessibility,
+   rights, culturally competent source authority and rejected identity-led
+   persuasion as **independent hard constraints**, not weighted sentiment.
+5. Name participant recruitment, consent, language/ability strata, sample
+   denominators, display/order randomization or its absence, response
+   noncoverage, data minimization and uncertainty **before** inspecting
+   results. For a small pilot report observations as a pilot; do not present
+   p-values or a universal “emotion” or “beat” score. Do not capture covert
+   behavioral or biometric data.
+
+The original [561.group Chromium visual witness](https://github.com/561-group/561.group/blob/main/scripts/assay-rendered-brand.mjs)
+already produces exact source, viewport, screenshot hash and computed-style
+observations. Extend **its existing REVIEW packet/CI artifact**, not a second
+site or dashboard, to present real specimens and a consent-based offline
+audience-reading worksheet. Actual respondent answers and source-qualified
+peer observations must enter existing Work/receiving through the competent
+office; a prepared worksheet, browser pixel mask, green build, view count or
+favorable model judgment **never** certifies felt effects or independent
+acceptance. Do not reuse an image in another venue merely because it appears
+in an award gallery.
+
+**Comparative decision and recurrence.** Record each measure, denominator,
+counterexample and judgment separately; name exactly which peer/job reached
+parity and which exceeded it, with uncertainty and an independently observed
+beneficiary. A creative work can earn an aesthetic success without a sale;
+a useful page can earn practical success without admiration. If no human
+responses exist, the correct result is **not yet evaluated**. On rejected
+artifacts improve the *actual source maker* (narrative, composition, typography,
+pacing, figure, interaction or original producer), fabricate and test another
+edition, then send it back to an independent audience. Neither broad
+brand-value comparisons nor exposure-maximizing manipulation can close this
+Work by proxy.
+
 ## Observed first case: the 561.group homepage, 2026-10-22/23
 
 **Original intent:** new ecological/economic/relational public content while
