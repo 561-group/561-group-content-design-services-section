@@ -281,6 +281,81 @@ edition, then send it back to an independent audience. Neither broad
 brand-value comparisons nor exposure-maximizing manipulation can close this
 Work by proxy.
 
+## Source-to-public-action receiving: witnessed-consequence first (2026-10-23)
+
+An observed second test case now qualifies an important **medium-native choice**
+inside the same original Group creative production job. The
+[561.group consolidated source PR #49](https://github.com/561-group/561.group/pull/49)
+retains the current public work/contact/payment-inquiry paths and restores
+the four-house original field score alongside one specific *original service
+event*: the original Causeway Green Web pilot page once returned HTTP 404,
+then the original publisher's
+[source and release repair](https://github.com/causeway-services/public-web-services-section/pull/27)
+was independently observed at HTTP 200. The web medium can **show the real
+404→200 consequence and offer the actual original
+[free worksheet](https://services.561.group/green-web-service-pilot/)**,
+rather than simply advertise a brand's ability to fix websites. This
+transfers AXA's *work changes the underlying service* and Spotify's *medium
+performs the point* mechanisms without copying either company's imagery
+or claiming equal creative reception.
+
+**Actual adverse receiving and source repair.** The original four-house
+visual score was technically correct, but a real 390px full-page screenshot
+showed the illustrative four-card narrative appearing *before* the documented
+service event and usable visitor action. This placed the most concrete
+answer late in the scrolling task, despite source tests and pixels passing.
+Within the **same original** TUFTE renderer and Design Bible the composer
+moved the documentarily witnessed consequence *ahead* of the explanatory
+four-company graphic score. The existing Chromium runner now observes
+`proofTop < cardsTop` as rendered DOM geometry at 390px and 1440px,
+and rejects a future regression or a counterfeited off-domain action; the
+existing source/HTML/JSON tests preserve the Group's recent real paid
+service opportunities and qualified customer inquiry routes. This is a
+specific practical layout/accessibility failure and corrected producer
+selection, not a universal claim that one story order improves feelings.
+
+**Qualify the full Work at each boundary:**
+
+- Source-qualified original Group identity and actual Causeway publisher
+  receipt: candidate documentary truth, not a live HTTP-uptime guarantee,
+  external client satisfaction, ecological efficacy or independent service
+  adoption. The effect has a dated source and human-inspectable original
+  working destination.
+- Installed TUFTE/Worker/Chromium result and local consent-first worksheet:
+  syntax/native/browser *technical receiving only*. The browser assays
+  one action's position, URL, 404→200 depiction, receipt links, source
+  qualifications and four original visual cards, not actual traffic,
+  accessibility across assistive technologies, intention or pleasantness.
+- Independent art and actual site reader receiving: still unperformed.
+  Different legitimate readers may prefer an abstract institutional story
+  before a practical service, or decline the whole sequence. Compare the
+  unchanged audience task, source-accurate plain alternative and actual
+  expressive alternative under the same device/conditions, with readers'
+  free choice and task success separate from stated valence/arousal.
+- Economic receiving: a buyer's service use, sent quote, agreed scope,
+  customer-accepted result and settled cash are separate native conditions;
+  the source-of-truth public price and terms remain with Causeway, not a
+  pretend checkout added to the Group's aesthetic experiment.
+
+**Reusable procedural decision, limited to this same job:** where the
+visitor is there to *find/understand/verify/use* a real service, present its
+best source-qualified practical consequence and the reversible, optional
+next action **before** an explanatory visual allegory, unless actual
+independent reader evidence supports a different order. In creative media
+whose audience job is fiction rather than service choice, this order is
+*not* mandatory; return to scene/character consequence and independent
+dramaturgical receiving. Refuse fake service receipts, fabricated emotion,
+invented provider authority, a privacy-intrusive engagement score or
+a victory claim derived from a passing source/test graph.
+
+**Observed results, not model approval:** the combined
+[GitHub Actions run #40062442947](https://github.com/561-group/561.group/actions/runs/40062442947)
+already qualified the source-consolidated candidate and four real
+Chromium snapshots. The revised source placing action first is under a
+subsequent run and requires its own readback before asserting conformance.
+No independent viewer, artistic editor or peer superiority is certified by
+either run.
+
 ## Observed first case: the 561.group homepage, 2026-10-22/23
 
 **Original intent:** new ecological/economic/relational public content while
